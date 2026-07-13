@@ -1,26 +1,58 @@
 import "./About.css";
+import { FaBullseye, FaEye, FaLightbulb } from "react-icons/fa";
 
 function About() {
   return (
-    <section className="about">
+    <section className="about" id="about">
 
-      <div className="about-content">
+      <div className="about-left">
 
-        <h2>About Pavium Technologies</h2>
+        <span className="section-tag">
+          ABOUT US
+        </span>
+
+        <h2>
+          We Build Modern
+          <span> Digital Experiences</span>
+        </h2>
 
         <p>
-          Pavium Technologies is a Software Development and IT Services
-          company dedicated to building modern digital solutions for startups,
-          businesses, and enterprises.
+          Pavium Technologies is a software development company
+          delivering enterprise-grade web applications, AI solutions,
+          cloud platforms, and mobile apps for startups and businesses.
         </p>
 
-        <p>
-          We specialize in Web Development, Mobile Applications,
-          Custom Software, ERP & CRM Solutions, Cloud Services,
-          and AI-powered business automation.
-        </p>
+        <button className="about-btn">
+          Learn More
+        </button>
 
-        <button>Know More</button>
+      </div>
+
+      <div className="about-right">
+
+        <div className="about-card">
+          <FaBullseye />
+          <h3>Our Mission</h3>
+          <p>
+            Deliver scalable digital solutions that accelerate business growth.
+          </p>
+        </div>
+
+        <div className="about-card">
+          <FaEye />
+          <h3>Our Vision</h3>
+          <p>
+            Become a trusted global technology partner.
+          </p>
+        </div>
+
+        <div className="about-card">
+          <FaLightbulb />
+          <h3>Innovation</h3>
+          <p>
+            We combine creativity with technology to build impactful products.
+          </p>
+        </div>
 
       </div>
 

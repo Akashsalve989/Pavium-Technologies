@@ -3,20 +3,29 @@
     background:#ffffff;
 }
 
-.tech-title{
+.tech-heading{
     text-align:center;
     margin-bottom:60px;
 }
 
-.tech-title h2{
-    font-size:42px;
-    color:#0F172A;
-    margin-bottom:15px;
+.tech-heading span{
+    color:#16a34a;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
 }
 
-.tech-title p{
-    color:#666;
-    font-size:18px;
+.tech-heading h2{
+    font-size:48px;
+    margin:20px 0;
+    color:#111827;
+}
+
+.tech-heading p{
+    max-width:700px;
+    margin:auto;
+    color:#6b7280;
+    line-height:1.8;
 }
 
 .tech-grid{
@@ -26,24 +35,28 @@
 }
 
 .tech-card{
-    background:#F8FAFC;
-    border-radius:15px;
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:20px;
     padding:35px 20px;
     text-align:center;
-    transition:0.3s;
-    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    transition:.35s;
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
 }
 
 .tech-card:hover{
-    transform:translateY(-10px);
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+    border-color:#16a34a;
 }
 
-.tech-icon{
+.tech-card svg{
     font-size:55px;
-    color:#2563EB;
+    color:#16a34a;
     margin-bottom:20px;
 }
 
 .tech-card h3{
-    color:#0F172A;
+    font-size:22px;
+    color:#222;
 }

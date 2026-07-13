@@ -1,60 +1,82 @@
 import "./Services.css";
 import {
-  FaCode,
   FaLaptopCode,
-  FaMobileAlt,
-  FaCloud,
-  FaDatabase,
   FaRobot,
+  FaCloud,
+  FaGlobe,
+  FaMobileAlt,
+  FaChartLine,
 } from "react-icons/fa";
+
+const services = [
+  {
+    icon: <FaLaptopCode />,
+    title: "Software Development",
+    desc: "Custom software, ERP, CRM & enterprise solutions.",
+  },
+  {
+    icon: <FaRobot />,
+    title: "AI Engineering",
+    desc: "Generative AI, automation & intelligent chatbots.",
+  },
+  {
+    icon: <FaCloud />,
+    title: "Cloud & DevOps",
+    desc: "AWS, Azure, Docker, CI/CD & cloud infrastructure.",
+  },
+  {
+    icon: <FaGlobe />,
+    title: "Web Development",
+    desc: "Modern responsive websites & web applications.",
+  },
+  {
+    icon: <FaMobileAlt />,
+    title: "Mobile App Development",
+    desc: "Android & iOS apps with modern UI/UX.",
+  },
+  {
+    icon: <FaChartLine />,
+    title: "Data Analytics",
+    desc: "Power BI, dashboards & business intelligence.",
+  },
+];
 
 function Services() {
   return (
-    <section className="services">
+    <section className="services" id="services">
 
-      <h2>Our Services</h2>
+      <div className="services-heading">
 
-      <p className="subtitle">
-        Innovative IT Solutions for Modern Businesses
-      </p>
+        <span>OUR SERVICES</span>
 
-      <div className="service-grid">
+        <h2>Technology Solutions For Every Business</h2>
 
-        <div className="card">
-          <FaCode className="icon" />
-          <h3>Website Development</h3>
-          <p>Modern responsive business websites.</p>
-        </div>
+        <p>
+          We build secure, scalable and innovative digital products
+          that help businesses grow faster.
+        </p>
 
-        <div className="card">
-          <FaLaptopCode className="icon" />
-          <h3>Custom Software</h3>
-          <p>Enterprise software solutions.</p>
-        </div>
+      </div>
 
-        <div className="card">
-          <FaMobileAlt className="icon" />
-          <h3>Mobile Apps</h3>
-          <p>Android & iOS Applications.</p>
-        </div>
+      <div className="services-grid">
 
-        <div className="card">
-          <FaCloud className="icon" />
-          <h3>Cloud Solutions</h3>
-          <p>Secure cloud infrastructure.</p>
-        </div>
+        {services.map((service, index) => (
+          <div className="service-card" key={index}>
 
-        <div className="card">
-          <FaDatabase className="icon" />
-          <h3>Database Design</h3>
-          <p>MySQL & PostgreSQL Solutions.</p>
-        </div>
+            <div className="service-icon">
+              {service.icon}
+            </div>
 
-        <div className="card">
-          <FaRobot className="icon" />
-          <h3>AI Automation</h3>
-          <p>Smart AI powered automation.</p>
-        </div>
+            <h3>{service.title}</h3>
+
+            <p>{service.desc}</p>
+
+            <button>
+              Learn More →
+            </button>
+
+          </div>
+        ))}
 
       </div>
 

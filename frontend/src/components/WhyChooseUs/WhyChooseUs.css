@@ -1,0 +1,144 @@
+.why{
+    padding:110px 8%;
+    background:#111827;
+    color:#fff;
+}
+
+.why-heading{
+    text-align:center;
+    max-width:760px;
+    margin:0 auto 70px;
+}
+
+.why-heading span{
+    display:inline-block;
+    padding:10px 22px;
+    border-radius:30px;
+    background:rgba(37,99,235,.12);
+    color:#60A5FA;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:2px;
+}
+
+.why-heading h2{
+    margin:20px 0;
+    font-size:52px;
+    font-weight:800;
+}
+
+.why-heading p{
+    color:#94A3B8;
+    font-size:17px;
+    line-height:1.8;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:28px;
+}
+
+.why-card{
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    padding:35px;
+    transition:.35s;
+    backdrop-filter:blur(18px);
+}
+
+.why-card:hover{
+    transform:translateY(-10px);
+    border-color:#2563EB;
+    box-shadow:0 25px 55px rgba(37,99,235,.18);
+}
+
+.why-icon{
+    width:70px;
+    height:70px;
+    border-radius:18px;
+    background:linear-gradient(135deg,#2563EB,#60A5FA);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    color:#fff;
+    margin-bottom:24px;
+}
+
+.why-card h3{
+    font-size:24px;
+    margin-bottom:14px;
+}
+
+.why-card p{
+    color:#94A3B8;
+    line-height:1.8;
+    margin-bottom:24px;
+}
+.why-card button{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:none;
+    border:none;
+    color:#60A5FA;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.why-card button:hover{
+    color:#fff;
+    transform:translateX(6px);
+}
+
+.why-card:hover .why-icon{
+    transform:rotate(-8deg) scale(1.08);
+}
+
+.why-icon{
+    transition:.35s;
+}
+
+@media(max-width:768px){
+
+.why{
+    padding:90px 7%;
+}
+
+.why-heading h2{
+    font-size:38px;
+}
+
+.why-grid{
+    grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:576px){
+
+.why{
+    padding:70px 6%;
+}
+
+.why-heading h2{
+    font-size:30px;
+}
+
+.why-card{
+    padding:26px;
+}
+
+.why-card h3{
+    font-size:21px;
+}
+
+.why-card p{
+    font-size:14px;
+}
+
+}
