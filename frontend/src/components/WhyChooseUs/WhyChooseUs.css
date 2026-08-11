@@ -1,7 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+/* ==========================
+        WHY CHOOSE US
+========================== */
+
 .why{
     padding:110px 8%;
-    background:#111827;
-    color:#fff;
+    background:#F8FAFC;
 }
 
 .why-heading{
@@ -14,8 +26,8 @@
     display:inline-block;
     padding:10px 22px;
     border-radius:30px;
-    background:rgba(37,99,235,.12);
-    color:#60A5FA;
+    background:#CCFBF1;
+    color:#0F766E;
     font-size:13px;
     font-weight:600;
     letter-spacing:2px;
@@ -25,10 +37,11 @@
     margin:20px 0;
     font-size:52px;
     font-weight:800;
+    color:#0F172A;
 }
 
 .why-heading p{
-    color:#94A3B8;
+    color:#64748B;
     font-size:17px;
     line-height:1.8;
 }
@@ -40,50 +53,57 @@
 }
 
 .why-card{
-    background:rgba(255,255,255,.04);
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:24px;
+    background:#FFFFFF;
+    border:1px solid #E2E8F0;
+    border-radius:22px;
     padding:35px;
     transition:.35s;
-    backdrop-filter:blur(18px);
 }
 
 .why-card:hover{
     transform:translateY(-10px);
-    border-color:#2563EB;
-    box-shadow:0 25px 55px rgba(37,99,235,.18);
+    border-color:#14B8A6;
+    box-shadow:0 15px 35px rgba(20,184,166,.15);
 }
 
 .why-icon{
     width:70px;
     height:70px;
     border-radius:18px;
-    background:linear-gradient(135deg,#2563EB,#60A5FA);
+    background:#0F766E;
     display:flex;
     justify-content:center;
     align-items:center;
     font-size:30px;
-    color:#fff;
+    color:#FFFFFF;
     margin-bottom:24px;
+    transition:.35s;
+}
+
+.why-card:hover .why-icon{
+    background:#14B8A6;
+    transform:scale(1.08);
 }
 
 .why-card h3{
     font-size:24px;
     margin-bottom:14px;
+    color:#0F172A;
 }
 
 .why-card p{
-    color:#94A3B8;
+    color:#64748B;
     line-height:1.8;
     margin-bottom:24px;
 }
+
 .why-card button{
     display:flex;
     align-items:center;
     gap:10px;
-    background:none;
     border:none;
-    color:#60A5FA;
+    background:none;
+    color:#0F766E;
     font-size:15px;
     font-weight:600;
     cursor:pointer;
@@ -91,54 +111,50 @@
 }
 
 .why-card button:hover{
-    color:#fff;
+    color:#F59E0B;
     transform:translateX(6px);
 }
 
-.why-card:hover .why-icon{
-    transform:rotate(-8deg) scale(1.08);
-}
-
-.why-icon{
-    transition:.35s;
-}
+/* ==========================
+        RESPONSIVE
+========================== */
 
 @media(max-width:768px){
 
-.why{
-    padding:90px 7%;
-}
+    .why{
+        padding:90px 7%;
+    }
 
-.why-heading h2{
-    font-size:38px;
-}
+    .why-heading h2{
+        font-size:38px;
+    }
 
-.why-grid{
-    grid-template-columns:1fr;
-}
+    .why-grid{
+        grid-template-columns:1fr;
+    }
 
 }
 
 @media(max-width:576px){
 
-.why{
-    padding:70px 6%;
-}
+    .why{
+        padding:70px 6%;
+    }
 
-.why-heading h2{
-    font-size:30px;
-}
+    .why-heading h2{
+        font-size:30px;
+    }
 
-.why-card{
-    padding:26px;
-}
+    .why-card{
+        padding:26px;
+    }
 
-.why-card h3{
-    font-size:21px;
-}
+    .why-card h3{
+        font-size:21px;
+    }
 
-.why-card p{
-    font-size:14px;
-}
+    .why-card p{
+        font-size:14px;
+    }
 
 }

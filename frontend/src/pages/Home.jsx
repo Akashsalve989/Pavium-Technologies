@@ -1,6 +1,4 @@
 import Hero from "../components/Hero/Hero";
-import Stats from "../components/Stats/Stats";
-import About from "../components/About/About";
 import Services from "../components/Services/Services";
 import Technologies from "../components/Technologies/Technologies";
 import WhyChooseUs from "../components/WhyChooseUs/WhyChooseUs";
@@ -16,8 +14,6 @@ function Home() {
   return (
     <>
       <Hero />
-      <Stats />
-      <About />
       <Services />
       <Technologies />
       <WhyChooseUs />

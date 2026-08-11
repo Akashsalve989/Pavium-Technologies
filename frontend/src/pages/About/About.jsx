@@ -1,20 +1,26 @@
 import "./About.css";
+
 import {
   FaLaptopCode,
   FaBullseye,
   FaLightbulb,
   FaRocket,
   FaUsers,
-  FaCheckCircle,
 } from "react-icons/fa";
 
 function About() {
   return (
     <section className="about">
 
+      {/* =========================
+          HEADER
+      ========================= */}
+
       <div className="about-header">
 
-        <span className="about-tag">ABOUT PAVIUM TECHNOLOGIES</span>
+        <span className="about-tag">
+          ABOUT PAVIUM TECHNOLOGIES
+        </span>
 
         <h1>
           Building Digital Excellence
@@ -30,7 +36,10 @@ function About() {
 
       </div>
 
-      {/* Company Overview */}
+
+      {/* =========================
+          COMPANY OVERVIEW
+      ========================= */}
 
       <div className="about-grid">
 
@@ -41,13 +50,13 @@ function About() {
           <h3>Who We Are</h3>
 
           <p>
-            Founded in 2026, Pavium Technologies delivers
-            enterprise software, web applications,
-            mobile apps, AI solutions and cloud services
-            for businesses worldwide.
+            Founded in 2026, Pavium Technologies delivers enterprise
+            software, web applications, mobile apps, AI solutions and
+            cloud services for businesses worldwide.
           </p>
 
         </div>
+
 
         <div className="about-card">
 
@@ -56,12 +65,13 @@ function About() {
           <h3>Our Vision</h3>
 
           <p>
-            To become one of India's most trusted technology
-            companies by delivering innovative software solutions
-            that empower businesses worldwide.
+            To become one of India's most trusted technology companies
+            by delivering innovative software solutions that empower
+            businesses worldwide.
           </p>
 
         </div>
+
 
         <div className="about-card">
 
@@ -70,12 +80,12 @@ function About() {
           <h3>Our Mission</h3>
 
           <p>
-            Deliver world-class digital products using modern
-            technologies while maintaining quality,
-            innovation and customer satisfaction.
+            Deliver world-class digital products using modern technologies
+            while maintaining quality, innovation and customer satisfaction.
           </p>
 
         </div>
+
 
         <div className="about-card">
 
@@ -84,16 +94,19 @@ function About() {
           <h3>Our Inspiration</h3>
 
           <p>
-            Every successful business starts with an idea.
-            Our inspiration is solving real-world problems
-            through innovative software and technology.
+            Every successful business starts with an idea. Our inspiration
+            is solving real-world problems through innovative software
+            and technology.
           </p>
 
         </div>
 
       </div>
 
-      {/* Statistics */}
+
+      {/* =========================
+          STATISTICS
+      ========================= */}
 
       <div className="stats">
 
@@ -119,81 +132,22 @@ function About() {
 
       </div>
 
-     {/* Founder */}
 
-<div className="founder">
-
-  <div className="founder-image">
-    <img
-  src="/IMG_3974.png"
-  alt="Akash Ramesh Salve"
-/>
-  </div>
-
-  <div className="founder-content">
-
-    <span className="about-tag">
-      Founder & CEO
-    </span>
-
-    <h2>Akash Ramesh Salve</h2>
-
-    <h4>Pavium Technologies</h4>
-
-    <p>
-      Akash Ramesh Salve is the Founder & CEO of Pavium Technologies,
-      leading the company with a vision to build innovative software,
-      AI-powered solutions, enterprise applications, cloud platforms,
-      and modern digital products.
-
-      His mission is to help startups, SMEs, and enterprises accelerate
-      digital transformation through technology, innovation, and quality
-      engineering.
-    </p>
-
-    <ul>
-
-      <li>
-        <FaCheckCircle />
-        Software Development
-      </li>
-
-      <li>
-        <FaCheckCircle />
-        Web & Mobile Applications
-      </li>
-
-      <li>
-        <FaCheckCircle />
-        AI & Machine Learning Solutions
-      </li>
-
-      <li>
-        <FaCheckCircle />
-        Cloud & DevOps Engineering
-      </li>
-
-      <li>
-        <FaCheckCircle />
-        Enterprise Software Development
-      </li>
-
-    </ul>
-
-  </div>
-
-</div>
-      {/* CTA */}
+      {/* =========================
+          CTA
+      ========================= */}
 
       <div className="about-cta">
 
         <FaUsers />
 
-        <h2>Let's Build Something Amazing Together</h2>
+        <h2>
+          Let's Build Something Amazing Together
+        </h2>
 
         <p>
-          Partner with Pavium Technologies to transform
-          your ideas into innovative digital solutions.
+          Partner with Pavium Technologies to transform your ideas
+          into innovative digital solutions.
         </p>
 
         <button>

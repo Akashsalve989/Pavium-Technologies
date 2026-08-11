@@ -13,6 +13,7 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         http
+                .cors(Customizer.withDefaults())   // ✅ CORS Enable
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
@@ -21,8 +22,9 @@ public class SecurityConfig {
                                 "/swagger-ui.html",
                                 "/api/auth/**",
                                 "/api/test",
-                                "/api/contact",
-                                "/api/careers/**"
+                                "/api/contact/**",
+                                "/api/careers/**",
+                                "/api/dashboard/**"
                         ).permitAll()
                         .anyRequest().authenticated()
                 )

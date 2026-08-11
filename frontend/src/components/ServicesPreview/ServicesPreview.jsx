@@ -1,4 +1,5 @@
 import "./ServicesPreview.css";
+import { useNavigate } from "react-router-dom";
 import {
   FaLaptopCode,
   FaRobot,
@@ -8,40 +9,41 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 
-const services = [
-  {
-    icon: <FaLaptopCode />,
-    title: "Software Development",
-    description: "Enterprise Web & ERP Solutions",
-  },
-  {
-    icon: <FaRobot />,
-    title: "AI Engineering",
-    description: "AI Automation & Machine Learning",
-  },
-  {
-    icon: <FaCloud />,
-    title: "Cloud & DevOps",
-    description: "AWS • Azure • Docker",
-  },
-  {
-    icon: <FaGlobe />,
-    title: "Web Development",
-    description: "React • Spring Boot",
-  },
-  {
-    icon: <FaMobileAlt />,
-    title: "Mobile Apps",
-    description: "Android & iOS Development",
-  },
-];
-
 function ServicesPreview() {
+  const navigate = useNavigate();
+
+  const services = [
+    {
+      icon: <FaLaptopCode />,
+      title: "Software Development",
+      description: "Enterprise Web & ERP Solutions",
+    },
+    {
+      icon: <FaRobot />,
+      title: "AI Engineering",
+      description: "AI Automation & Machine Learning",
+    },
+    {
+      icon: <FaCloud />,
+      title: "Cloud & DevOps",
+      description: "AWS • Azure • Docker",
+    },
+    {
+      icon: <FaGlobe />,
+      title: "Web Development",
+      description: "React • Spring Boot",
+    },
+    {
+      icon: <FaMobileAlt />,
+      title: "Mobile App Development",
+      description: "Android & iOS Applications",
+    },
+  ];
+
   return (
     <div className="browser">
 
       <div className="browser-header">
-
         <div className="browser-dots">
           <span className="red"></span>
           <span className="yellow"></span>
@@ -51,7 +53,6 @@ function ServicesPreview() {
         <div className="browser-url">
           https://paviumtech.com
         </div>
-
       </div>
 
       <div className="browser-body">
@@ -65,7 +66,6 @@ function ServicesPreview() {
         </h2>
 
         {services.map((service, index) => (
-
           <div className="service-title" key={index}>
 
             <div className="icon">
@@ -73,24 +73,21 @@ function ServicesPreview() {
             </div>
 
             <div className="service-info">
-
               <h3>{service.title}</h3>
-
               <p>{service.description}</p>
-
             </div>
 
             <div className="arrow">
-
               <FaArrowRight />
-
             </div>
 
           </div>
-
         ))}
 
-        <button className="view-btn">
+        <button
+          className="view-btn"
+          onClick={() => navigate("/services")}
+        >
           View All Services
         </button>
 

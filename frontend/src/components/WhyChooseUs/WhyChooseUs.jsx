@@ -1,4 +1,5 @@
 import "./WhyChooseUs.css";
+import { useNavigate } from "react-router-dom";
 import {
   FaLaptopCode,
   FaUserTie,
@@ -9,60 +10,63 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 
-const features = [
-  {
-    icon: <FaLaptopCode />,
-    title: "Modern Technology",
-    desc: "React, Spring Boot, Cloud, AI & Enterprise Solutions",
-  },
-  {
-    icon: <FaUserTie />,
-    title: "Professional Team",
-    desc: "Experienced engineers delivering quality software",
-  },
-  {
-    icon: <FaShieldAlt />,
-    title: "Secure Applications",
-    desc: "Enterprise-grade security & best development practices",
-  },
-  {
-    icon: <FaClock />,
-    title: "On-Time Delivery",
-    desc: "Agile development with transparent project tracking",
-  },
-  {
-    icon: <FaHandshake />,
-    title: "Trusted Partnership",
-    desc: "Long-term technology partner for your business",
-  },
-  {
-    icon: <FaHeadset />,
-    title: "24×7 Support",
-    desc: "Reliable support whenever your business needs us",
-  },
-];
-
 function WhyChooseUs() {
+  const navigate = useNavigate();
+
+  const features = [
+    {
+      icon: <FaLaptopCode />,
+      title: "Modern Technology",
+      desc: "React, Spring Boot, AI, Cloud & Enterprise Software Solutions.",
+    },
+    {
+      icon: <FaUserTie />,
+      title: "Experienced Team",
+      desc: "Skilled developers delivering secure, scalable and high-quality software.",
+    },
+    {
+      icon: <FaShieldAlt />,
+      title: "Enterprise Security",
+      desc: "Secure architecture with modern development standards and best practices.",
+    },
+    {
+      icon: <FaClock />,
+      title: "On-Time Delivery",
+      desc: "Agile project management ensures fast and reliable delivery.",
+    },
+    {
+      icon: <FaHandshake />,
+      title: "Trusted Partnership",
+      desc: "We build long-term relationships and support business growth.",
+    },
+    {
+      icon: <FaHeadset />,
+      title: "24/7 Support",
+      desc: "Dedicated technical support whenever your business needs assistance.",
+    },
+  ];
+
   return (
     <section className="why" id="why">
 
       <div className="why-heading">
+        <span>WHY CHOOSE PAVIUM</span>
 
-        <span>WHY CHOOSE US</span>
-
-        <h2>Why Businesses Choose Pavium Technologies</h2>
+        <h2>
+          Smart Technology.
+          <br />
+          Trusted Partnership.
+        </h2>
 
         <p>
-          We combine innovation, security, and modern technologies
-          to build software that helps businesses scale confidently.
+          Pavium Technologies delivers innovative software, cloud,
+          AI and web solutions that help startups and enterprises
+          grow faster with confidence.
         </p>
-
       </div>
 
       <div className="why-grid">
-
         {features.map((item, index) => (
-
           <div className="why-card" key={index}>
 
             <div className="why-icon">
@@ -73,15 +77,13 @@ function WhyChooseUs() {
 
             <p>{item.desc}</p>
 
-            <button>
+            <button onClick={() => navigate("/services")}>
               Learn More
               <FaArrowRight />
             </button>
 
           </div>
-
         ))}
-
       </div>
 
     </section>
