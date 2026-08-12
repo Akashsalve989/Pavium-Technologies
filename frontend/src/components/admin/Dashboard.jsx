@@ -16,14 +16,27 @@ const Dashboard = () => {
 
   const loadStats = async () => {
     try {
+
+      const token = localStorage.getItem("token");
+
       const res = await axios.get(
-        "http://localhost:8080/api/dashboard/stats"
+        "http://localhost:8080/api/dashboard/stats",
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
       );
 
       setStats(res.data);
 
     } catch (err) {
-      console.log(err);
+
+      console.log("Dashboard Stats Error:", err);
+
+      if (err.response?.status === 401 || err.response?.status === 403) {
+        console.log("JWT token missing or invalid");
+      }
     }
   };
 
