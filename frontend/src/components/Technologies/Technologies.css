@@ -1,62 +1,501 @@
-.technologies{
-    padding:100px 8%;
-    background:#ffffff;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.tech-heading{
-    text-align:center;
-    margin-bottom:60px;
+
+/* =====================================================
+   TECHNOLOGIES SECTION
+===================================================== */
+
+.technologies {
+  position: relative;
+
+  width: 100%;
+
+  padding: 105px 6% 115px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(20, 184, 166, 0.07),
+      transparent 27%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(15, 23, 42, 0.045),
+      transparent 28%
+    ),
+    #ffffff;
 }
 
-.tech-heading span{
-    color:#16a34a;
-    font-weight:600;
-    letter-spacing:2px;
-    text-transform:uppercase;
+
+/* =====================================================
+   BACKGROUND DECORATION
+===================================================== */
+
+.technologies::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  top: -220px;
+  left: -180px;
+
+  border-radius: 50%;
+
+  background: rgba(20, 184, 166, 0.055);
+
+  filter: blur(80px);
+
+  pointer-events: none;
 }
 
-.tech-heading h2{
-    font-size:48px;
-    margin:20px 0;
-    color:#111827;
+.technologies::after {
+  content: "";
+
+  position: absolute;
+
+  width: 360px;
+  height: 360px;
+
+  right: -180px;
+  bottom: -200px;
+
+  border-radius: 50%;
+
+  background: rgba(15, 23, 42, 0.04);
+
+  filter: blur(80px);
+
+  pointer-events: none;
 }
 
-.tech-heading p{
-    max-width:700px;
-    margin:auto;
-    color:#6b7280;
-    line-height:1.8;
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.tech-heading {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 800px;
+
+  margin: 0 auto 55px;
+
+  text-align: center;
 }
 
-.tech-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:25px;
+
+/* Small title */
+
+.tech-heading span {
+  display: inline-block;
+
+  margin-bottom: 13px;
+
+  color: #0f766e;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
 }
 
-.tech-card{
-    background:#fff;
-    border:1px solid #e5e7eb;
-    border-radius:20px;
-    padding:35px 20px;
-    text-align:center;
-    transition:.35s;
-    box-shadow:0 8px 25px rgba(0,0,0,.06);
+
+/* Main heading */
+
+.tech-heading h2 {
+  margin: 0 0 17px;
+
+  color: #0f172a;
+
+  font-size: clamp(36px, 4vw, 50px);
+
+  line-height: 1.15;
+
+  font-weight: 800;
+
+  letter-spacing: -1.6px;
 }
 
-.tech-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 20px 40px rgba(0,0,0,.12);
-    border-color:#16a34a;
+
+/* Paragraph */
+
+.tech-heading p {
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  color: #64748b;
+
+  font-size: 15px;
+
+  line-height: 1.8;
 }
 
-.tech-card svg{
-    font-size:55px;
-    color:#16a34a;
-    margin-bottom:20px;
+
+/* =====================================================
+   TECHNOLOGY GRID
+===================================================== */
+
+.tech-grid {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 22px;
 }
 
-.tech-card h3{
-    font-size:22px;
-    color:#222;
+
+/* =====================================================
+   TECHNOLOGY CARD
+===================================================== */
+
+.tech-card {
+  position: relative;
+
+  min-height: 190px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px 20px;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  text-align: center;
+
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.055);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+}
+
+
+/* Top accent */
+
+.tech-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  width: 0;
+  height: 3px;
+
+  background: #14b8a6;
+
+  transform: translateX(-50%);
+
+  transition: width 0.4s ease;
+}
+
+
+/* Hover */
+
+.tech-card:hover {
+  transform: translateY(-8px);
+
+  border-color: #99f6e4;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 22px 45px rgba(15, 118, 110, 0.12);
+}
+
+.tech-card:hover::before {
+  width: 70%;
+}
+
+
+/* =====================================================
+   TECHNOLOGY ICON
+===================================================== */
+
+.tech-card svg {
+  width: 55px;
+  height: 55px;
+
+  padding: 13px;
+
+  margin-bottom: 18px;
+
+  border-radius: 15px;
+
+  background: #ecfdf5;
+
+  color: #0f766e;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.tech-card:hover svg {
+  background: #0f766e;
+
+  color: #ffffff;
+
+  transform: translateY(-3px) scale(1.08);
+
+  box-shadow:
+    0 10px 22px rgba(15, 118, 110, 0.20);
+}
+
+
+/* =====================================================
+   TECHNOLOGY NAME
+===================================================== */
+
+.tech-card h3 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  transition: color 0.3s ease;
+}
+
+.tech-card:hover h3 {
+  color: #0f766e;
+}
+
+
+/* =====================================================
+   OPTIONAL DESCRIPTION
+===================================================== */
+
+.tech-card p {
+  margin-top: 7px;
+
+  color: #64748b;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .technologies {
+    padding: 90px 5% 100px;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+  }
+
+  .tech-card {
+    min-height: 180px;
+  }
+}
+
+
+/* =====================================================
+   TABLET / SMALL LAPTOP
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .technologies {
+    padding: 80px 5% 90px;
+  }
+
+  .tech-heading {
+    margin-bottom: 40px;
+  }
+
+  .tech-heading h2 {
+    font-size: 35px;
+
+    letter-spacing: -1px;
+  }
+
+  .tech-heading p {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+  }
+
+  .tech-card {
+    min-height: 165px;
+
+    padding: 25px 15px;
+
+    border-radius: 17px;
+  }
+
+  .tech-card svg {
+    width: 50px;
+    height: 50px;
+
+    padding: 12px;
+
+    margin-bottom: 14px;
+  }
+
+  .tech-card h3 {
+    font-size: 16px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 576px) {
+
+  .technologies {
+    padding: 70px 5% 75px;
+  }
+
+  .tech-heading {
+    margin-bottom: 32px;
+  }
+
+  .tech-heading span {
+    font-size: 10.5px;
+
+    letter-spacing: 1.7px;
+  }
+
+  .tech-heading h2 {
+    margin-bottom: 13px;
+
+    font-size: 28px;
+
+    line-height: 1.2;
+  }
+
+  .tech-heading p {
+    font-size: 13px;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 13px;
+  }
+
+  .tech-card {
+    min-height: 145px;
+
+    padding: 21px 10px;
+
+    border-radius: 15px;
+  }
+
+  .tech-card svg {
+    width: 45px;
+    height: 45px;
+
+    padding: 10px;
+
+    margin-bottom: 12px;
+
+    border-radius: 12px;
+  }
+
+  .tech-card h3 {
+    font-size: 14px;
+  }
+
+  .tech-card p {
+    font-size: 10.5px;
+  }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+
+  .technologies {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .tech-grid {
+    gap: 10px;
+  }
+
+  .tech-card {
+    min-height: 135px;
+
+    padding: 17px 8px;
+  }
+
+  .tech-card svg {
+    width: 40px;
+    height: 40px;
+
+    padding: 9px;
+  }
+
+  .tech-card h3 {
+    font-size: 12.5px;
+  }
 }

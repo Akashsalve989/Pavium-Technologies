@@ -1,0 +1,547 @@
+.certificates-page {
+  padding: 30px;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.certificate-header {
+  margin-bottom: 25px;
+}
+
+.certificate-header h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #111827;
+}
+
+.certificate-header p {
+  margin-top: 8px;
+  color: #64748b;
+}
+
+
+/* =========================
+   CERTIFICATE TYPE BUTTONS
+========================= */
+
+.certificate-type-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.certificate-type-buttons button {
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+
+  background: #e2e8f0;
+  color: #334155;
+
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.certificate-type-buttons button:hover {
+  background: #cbd5e1;
+}
+
+.certificate-type-buttons button.active {
+  background: #111827;
+  color: white;
+}
+
+
+/* =========================
+   CERTIFICATE CONTENT
+========================= */
+
+.certificate-content {
+  display: grid;
+
+  grid-template-columns: 380px 1fr;
+
+  gap: 25px;
+
+  align-items: start;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.certificate-form-card,
+.certificate-preview-card {
+  background: white;
+
+  border-radius: 12px;
+
+  padding: 25px;
+
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+}
+
+.certificate-form-card h2,
+.certificate-preview-card h2 {
+  margin-top: 0;
+
+  margin-bottom: 22px;
+
+  color: #111827;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-weight: 600;
+
+  color: #334155;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 11px 12px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 7px;
+
+  outline: none;
+
+  font-family: inherit;
+
+  font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #38bdf8;
+}
+
+.date-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+}
+
+
+/* =========================
+   CERTIFICATE PREVIEW
+========================= */
+
+.certificate-preview {
+  background: #e5e7eb;
+
+  padding: 25px;
+
+  overflow-x: auto;
+}
+
+
+/* =========================
+   CERTIFICATE PAGE
+========================= */
+
+.certificate-border {
+  min-width: 700px;
+
+  min-height: 490px;
+
+  background: #ffffff;
+
+  border: 10px solid #111827;
+
+  outline: 2px solid #38bdf8;
+
+  outline-offset: -18px;
+
+  padding: 45px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+/* =========================
+   PAVIUM WATERMARK
+========================= */
+
+.certificate-border::before {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 240px;
+  height: 240px;
+
+  background-image: url("/Logo.png.png");
+
+  background-repeat: no-repeat;
+
+  background-position: center;
+
+  background-size: contain;
+
+  transform: translate(-50%, -50%);
+
+  opacity: 0.17;
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+
+/* =========================
+   CERTIFICATE CONTENT ABOVE
+   WATERMARK
+========================= */
+
+.certificate-border > * {
+  position: relative;
+
+  z-index: 1;
+}
+
+
+/* =========================
+   CERTIFICATE LOGO TEXT
+========================= */
+
+.certificate-logo {
+  font-size: 25px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  color: #111827;
+}
+
+.certificate-logo span {
+  display: block;
+
+  font-size: 12px;
+
+  letter-spacing: 5px;
+
+  color: #38bdf8;
+
+  margin-top: 3px;
+}
+
+
+/* =========================
+   CERTIFICATE TITLE
+========================= */
+
+.certificate-title {
+  margin-top: 28px;
+
+  font-size: 27px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  color: #111827;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.certificate-intro {
+  margin-top: 20px;
+
+  color: #64748b;
+}
+
+
+/* =========================
+   RECIPIENT NAME
+========================= */
+
+.recipient-name {
+  margin: 10px 0;
+
+  font-family: Georgia, serif;
+
+  font-size: 30px;
+
+  color: #111827;
+}
+
+
+/* =========================
+   BLUE LINE
+========================= */
+
+.certificate-line {
+  width: 280px;
+
+  height: 1px;
+
+  background: #38bdf8;
+
+  margin: 0 auto 18px;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.certificate-description {
+  max-width: 620px;
+
+  margin: auto;
+
+  line-height: 1.7;
+
+  color: #334155;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   CERTIFICATE DETAILS
+========================= */
+
+.certificate-details {
+  margin-top: 20px;
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 50px;
+}
+
+.certificate-details div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.certificate-details strong {
+  font-size: 11px;
+
+  text-transform: uppercase;
+
+  color: #64748b;
+}
+
+.certificate-details span {
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #111827;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.certificate-footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  margin-top: 35px;
+}
+
+
+/* =========================
+   SIGNATURE BOX
+========================= */
+
+.signature-box {
+  text-align: center;
+
+  min-width: 180px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: flex-end;
+}
+
+
+/* =========================
+   SIGNATURE IMAGE
+========================= */
+
+.signature-image {
+  width: 150px;
+
+  height: 55px;
+
+  object-fit: contain;
+
+  display: block;
+
+  margin-bottom: -2px;
+}
+
+
+/* =========================
+   SIGNATURE LINE
+========================= */
+
+.signature-line {
+  width: 180px;
+
+  height: 1px;
+
+  background: #111827;
+
+  margin-bottom: 7px;
+}
+
+
+/* =========================
+   SIGNATURE NAME
+========================= */
+
+.signature-box strong {
+  font-size: 12px;
+
+  font-weight: 700;
+
+  color: #111827;
+}
+
+
+/* =========================
+   SIGNATURE DESIGNATION
+========================= */
+
+.signature-box span {
+  font-size: 10px;
+
+  color: #64748b;
+
+  line-height: 1.4;
+}
+
+
+/* =========================
+   CERTIFICATE META
+========================= */
+
+.certificate-meta {
+  display: flex;
+
+  flex-direction: column;
+
+  text-align: right;
+
+  gap: 3px;
+}
+
+.certificate-meta strong {
+  font-size: 11px;
+
+  color: #111827;
+}
+
+.certificate-meta span {
+  font-size: 9px;
+
+  color: #64748b;
+
+  margin-bottom: 5px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+  .certificate-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .certificates-page {
+    padding: 20px;
+  }
+
+  .certificate-type-buttons {
+    flex-direction: column;
+  }
+
+  .date-row {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-preview {
+    padding: 10px;
+  }
+
+  .certificate-border::before {
+    width: 200px;
+
+    height: 200px;
+  }
+
+  .signature-image {
+    width: 140px;
+
+    height: 50px;
+  }
+}

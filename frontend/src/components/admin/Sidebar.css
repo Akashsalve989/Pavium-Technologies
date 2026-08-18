@@ -7,6 +7,8 @@
   left: 0;
   top: 0;
   padding: 20px;
+  box-sizing: border-box;
+  z-index: 1000;
 }
 
 .logo {
@@ -19,6 +21,7 @@
 .sidebar ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .sidebar ul li {
@@ -36,7 +39,25 @@
   background: #1e293b;
 }
 
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+  color: #38bdf8;
+}
+
 .logout {
   margin-top: 40px;
+  color: #ff6b6b;
+}
+
+.logout:hover {
+  background: #3f1d1d !important;
   color: #ff6b6b;
 }

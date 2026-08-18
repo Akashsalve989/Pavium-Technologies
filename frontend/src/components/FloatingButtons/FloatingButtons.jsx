@@ -3,62 +3,62 @@ import { FaWhatsapp, FaArrowUp } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
 function FloatingButtons() {
-
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
-
     const handleScroll = () => {
-
-      if (window.scrollY > 300) {
-        setShowButton(true);
-      } else {
-        setShowButton(false);
-      }
-
+      setShowButton(window.scrollY > 300);
     };
 
     window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
-
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const scrollTop = () => {
-
     window.scrollTo({
-      top:0,
-      behavior:"smooth"
+      top: 0,
+      behavior: "smooth",
     });
-
   };
 
   return (
     <>
+      {/* =========================
+          WHATSAPP
+      ========================= */}
 
       <a
-        href="https://wa.me/91XXXXXXXXXX"
+        href="https://wa.me/91XXXXXXXXXX?text=Hello%20PaviumTech%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         className="whatsapp-btn"
+        aria-label="Chat with PaviumTech on WhatsApp"
+        title="Chat on WhatsApp"
       >
         <FaWhatsapp />
       </a>
 
-      {showButton && (
 
+      {/* =========================
+          SCROLL TO TOP
+      ========================= */}
+
+      {showButton && (
         <button
+          type="button"
           className="scroll-btn"
           onClick={scrollTop}
+          aria-label="Scroll to top"
+          title="Back to top"
         >
           <FaArrowUp />
         </button>
-
       )}
-
     </>
   );
-
 }
 
 export default FloatingButtons;

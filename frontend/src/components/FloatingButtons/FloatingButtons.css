@@ -1,105 +1,178 @@
-.whatsapp-btn{
-
-position:fixed;
-
-bottom:30px;
-
-left:30px;
-
-width:60px;
-
-height:60px;
-
-background:#25d366;
-
-border-radius:50%;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-color:white;
-
-font-size:30px;
-
-text-decoration:none;
-
-box-shadow:0 10px 25px rgba(0,0,0,.3);
-
-z-index:999;
-
-transition:.3s;
-
-animation:float 2s infinite;
-
+* {
+  box-sizing: border-box;
 }
 
-.whatsapp-btn:hover{
 
-transform:scale(1.1);
+/* =====================================================
+   WHATSAPP BUTTON
+===================================================== */
 
+.whatsapp-btn {
+  position: fixed;
+
+  left: 26px;
+  bottom: 26px;
+
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #25d366;
+
+  color: #ffffff;
+
+  font-size: 28px;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 8px 25px rgba(37, 211, 102, 0.30);
+
+  z-index: 999;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  animation: whatsappFloat 2.5s ease-in-out infinite;
 }
 
-.scroll-btn{
+.whatsapp-btn:hover {
+  transform: scale(1.08);
 
-position:fixed;
-
-right:30px;
-
-bottom:30px;
-
-width:60px;
-
-height:60px;
-
-border:none;
-
-border-radius:50%;
-
-background:#2563eb;
-
-color:white;
-
-font-size:24px;
-
-cursor:pointer;
-
-box-shadow:0 10px 25px rgba(0,0,0,.3);
-
-transition:.3s;
-
-z-index:999;
-
+  box-shadow:
+    0 12px 32px rgba(37, 211, 102, 0.40);
 }
 
-.scroll-btn:hover{
 
-background:#1d4ed8;
+/* =====================================================
+   SCROLL TO TOP
+===================================================== */
 
-transform:translateY(-5px);
+.scroll-btn {
+  position: fixed;
 
+  right: 26px;
+  bottom: 26px;
+
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 50%;
+
+  background: #0f172a;
+
+  color: #ffffff;
+
+  font-size: 21px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 25px rgba(15, 23, 42, 0.25);
+
+  z-index: 999;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-@keyframes float{
+.scroll-btn:hover {
+  background: #0f766e;
 
-0%{
+  color: #ffffff;
 
-transform:translateY(0);
+  transform: translateY(-5px);
 
+  box-shadow:
+    0 12px 30px rgba(15, 118, 110, 0.30);
 }
 
-50%{
 
-transform:translateY(-8px);
+/* =====================================================
+   WHATSAPP FLOAT ANIMATION
+===================================================== */
 
+@keyframes whatsappFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
-100%{
 
-transform:translateY(0);
+/* =====================================================
+   MOBILE
+===================================================== */
 
+@media (max-width: 576px) {
+
+  .whatsapp-btn,
+  .scroll-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .whatsapp-btn {
+    left: 16px;
+    bottom: 18px;
+
+    font-size: 24px;
+  }
+
+  .scroll-btn {
+    right: 16px;
+    bottom: 18px;
+
+    font-size: 18px;
+  }
 }
 
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+
+  .whatsapp-btn,
+  .scroll-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .whatsapp-btn {
+    left: 13px;
+    bottom: 14px;
+
+    font-size: 21px;
+  }
+
+  .scroll-btn {
+    right: 13px;
+    bottom: 14px;
+
+    font-size: 16px;
+  }
 }

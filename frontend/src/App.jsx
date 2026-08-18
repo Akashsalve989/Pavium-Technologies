@@ -13,12 +13,12 @@ import Login from "./components/admin/Login";
 import Dashboard from "./components/admin/Dashboard";
 import Contacts from "./components/admin/Contacts";
 import CareersAdmin from "./components/admin/Careers";
+import Certificates from "./components/admin/Certificates";
 import Admins from "./components/admin/Admins";
 import Settings from "./components/admin/Settings";
 
 import PrivateRoute from "./components/admin/PrivateRoute";
 import AdminLayout from "./components/admin/AdminLayout";
-
 
 function App() {
   return (
@@ -50,6 +50,7 @@ function App() {
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="contacts" element={<Contacts />} />
           <Route path="careers" element={<CareersAdmin />} />
+          <Route path="certificates" element={<Certificates />} />
           <Route path="admins" element={<Admins />} />
           <Route path="settings" element={<Settings />} />
         </Route>

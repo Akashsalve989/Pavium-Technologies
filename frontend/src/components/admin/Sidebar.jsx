@@ -4,13 +4,13 @@ import {
   FaTachometerAlt,
   FaEnvelope,
   FaBriefcase,
+  FaCertificate,
   FaUsers,
   FaCog,
   FaSignOutAlt,
 } from "react-icons/fa";
 
 const Sidebar = () => {
-
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -25,41 +25,47 @@ const Sidebar = () => {
 
       <ul>
 
-  <li>
-    <Link to="/admin/dashboard">
-      <FaTachometerAlt /> Dashboard
-    </Link>
-  </li>
+        <li>
+          <Link to="/admin/dashboard">
+            <FaTachometerAlt /> Dashboard
+          </Link>
+        </li>
 
-  <li>
-    <Link to="/admin/contacts">
-      <FaEnvelope /> Contacts
-    </Link>
-  </li>
+        <li>
+          <Link to="/admin/contacts">
+            <FaEnvelope /> Contacts
+          </Link>
+        </li>
 
-  <li>
-    <Link to="/admin/careers">
-      <FaBriefcase /> Careers
-    </Link>
-  </li>
+        <li>
+          <Link to="/admin/careers">
+            <FaBriefcase /> Careers
+          </Link>
+        </li>
 
-  <li>
-    <Link to="/admin/admins">
-      <FaUsers /> Admins
-    </Link>
-  </li>
+        <li>
+          <Link to="/admin/certificates">
+            <FaCertificate /> Certificates
+          </Link>
+        </li>
 
-  <li>
-    <Link to="/admin/settings">
-      <FaCog /> Settings
-    </Link>
-  </li>
+        <li>
+          <Link to="/admin/admins">
+            <FaUsers /> Admins
+          </Link>
+        </li>
 
-  <li className="logout" onClick={handleLogout}>
-    <FaSignOutAlt /> Logout
-  </li>
+        <li>
+          <Link to="/admin/settings">
+            <FaCog /> Settings
+          </Link>
+        </li>
 
-</ul>
+        <li className="logout" onClick={handleLogout}>
+          <FaSignOutAlt /> Logout
+        </li>
+
+      </ul>
 
     </div>
   );

@@ -1,4 +1,5 @@
 import "./Services.css";
+import { useNavigate } from "react-router-dom";
 import {
   FaLaptopCode,
   FaRobot,
@@ -6,6 +7,7 @@ import {
   FaGlobe,
   FaMobileAlt,
   FaChartLine,
+  FaArrowRight,
 } from "react-icons/fa";
 
 const services = [
@@ -42,14 +44,36 @@ const services = [
 ];
 
 function Services() {
+  const navigate = useNavigate();
+
+  const handleLearnMore = () => {
+    navigate("/contact");
+
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, 50);
+  };
+
   return (
     <section className="services" id="services">
 
+      {/* =========================
+          HEADING
+      ========================= */}
+
       <div className="services-heading">
 
-        <span>OUR SERVICES</span>
+        <span className="services-label">
+          OUR SERVICES
+        </span>
 
-        <h2>Technology Solutions For Every Business</h2>
+        <h2>
+          Technology Solutions{" "}
+          <span>For Every Business</span>
+        </h2>
 
         <p>
           We build secure, scalable and innovative digital products
@@ -58,24 +82,54 @@ function Services() {
 
       </div>
 
+
+      {/* =========================
+          SERVICES GRID
+      ========================= */}
+
       <div className="services-grid">
 
         {services.map((service, index) => (
-          <div className="service-card" key={index}>
+          <article
+            className="service-card"
+            key={service.title}
+            style={{
+              "--delay": `${index * 0.08}s`,
+            }}
+          >
 
+            {/* Icon */}
             <div className="service-icon">
               {service.icon}
             </div>
 
-            <h3>{service.title}</h3>
 
-            <p>{service.desc}</p>
+            {/* Content */}
+            <div className="service-card-content">
 
-            <button>
-              Learn More →
+              <h3>
+                {service.title}
+              </h3>
+
+              <p>
+                {service.desc}
+              </p>
+
+            </div>
+
+
+            {/* Learn More */}
+            <button
+              type="button"
+              className="service-link"
+              onClick={handleLearnMore}
+            >
+              <span>Learn More</span>
+
+              <FaArrowRight />
             </button>
 
-          </div>
+          </article>
         ))}
 
       </div>

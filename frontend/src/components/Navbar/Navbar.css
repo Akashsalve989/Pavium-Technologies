@@ -1,291 +1,468 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    background: #f8fafc;
-    overflow-x: hidden;
+  background: #ffffff;
+  overflow-x: hidden;
 }
 
 
-/* =========================
+/* =====================================================
    NAVBAR
-========================= */
+===================================================== */
 
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
 
-    width: 100%;
-    height: 82px;
+  width: 100%;
+  height: 82px;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    padding: 0 7%;
+  padding: 0 7%;
 
-    background: rgba(15, 23, 42, 0.96);
-    backdrop-filter: blur(14px);
+  background: rgba(15, 23, 42, 0.97);
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 
-    box-shadow: 0 5px 25px rgba(15, 23, 42, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 
-    z-index: 9999;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.16);
+
+  z-index: 9999;
 }
 
 
-/* =========================
+/* =====================================================
    LOGO
-========================= */
+===================================================== */
 
 .logo {
-    cursor: pointer;
-    user-select: none;
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+  user-select: none;
+
+  flex-shrink: 0;
 }
 
 .logo h2 {
-    margin: 0;
+  margin: 0;
 
-    color: #ffffff;
+  color: #ffffff;
 
-    font-size: 30px;
-    font-weight: 700;
+  font-size: 30px;
+  font-weight: 700;
 
-    letter-spacing: -0.8px;
+  letter-spacing: -1.2px;
+  line-height: 1;
 
-    cursor: pointer;
-
-    transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .logo span {
-    color: #22c1b0;
+  color: #16b8aa;
+
+  transition: color 0.3s ease;
 }
 
 .logo:hover h2 {
-    transform: translateY(-1px);
+  transform: translateY(-1px);
+}
+
+.logo:hover span {
+  color: #20cbbd;
 }
 
 
-/* =========================
+/* =====================================================
    NAVIGATION
-========================= */
+===================================================== */
 
 .nav-menu {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-}
+  display: flex;
+  align-items: center;
 
-.nav-menu a {
-    position: relative;
+  gap: 34px;
 
-    color: #e2e8f0;
-
-    text-decoration: none;
-
-    font-size: 15px;
-    font-weight: 500;
-
-    transition: color 0.3s ease;
-}
-
-.nav-menu a::after {
-    content: "";
-
-    position: absolute;
-
-    left: 50%;
-    bottom: -9px;
-
-    width: 0;
-    height: 2px;
-
-    background: #22c1b0;
-
-    transform: translateX(-50%);
-
-    transition: width 0.3s ease;
-}
-
-.nav-menu a:hover {
-    color: #22c1b0;
-}
-
-.nav-menu a:hover::after {
-    width: 100%;
+  height: 100%;
 }
 
 
-/* =========================
-   ACTIVE LINK
-========================= */
+/* =====================================================
+   NAV LINKS
+===================================================== */
 
-.nav-menu a.active {
-    color: #22c1b0;
+.nav-link {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+
+  color: #e2e8f0;
+
+  text-decoration: none;
+
+  font-size: 15.5px;
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
 }
 
-.nav-menu a.active::after {
-    width: 100%;
+
+/* Underline */
+
+.nav-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 8px;
+
+  width: 0;
+  height: 2px;
+
+  border-radius: 10px;
+
+  background: #19c1b2;
+
+  transform: translateX(-50%);
+
+  transition: width 0.3s ease;
 }
 
 
-/* =========================
-   QUOTE BUTTON
-========================= */
+/* Hover */
+
+.nav-link:hover {
+  color: #19c1b2;
+
+  transform: translateY(-1px);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+
+/* Active */
+
+.nav-link.active {
+  color: #19c1b2;
+
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+
+/* =====================================================
+   GET FREE QUOTE BUTTON
+===================================================== */
 
 .quote-btn {
-    padding: 12px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-    border: none;
-    border-radius: 9px;
+  min-width: 178px;
 
-    background: #2563eb;
-    color: #ffffff;
+  padding: 15px 25px;
 
-    font-size: 14px;
-    font-weight: 600;
+  border: none;
+  border-radius: 11px;
 
-    cursor: pointer;
+  background: #2864e8;
 
-    transition: all 0.3s ease;
+  color: #ffffff;
 
-    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.20);
+  font-family: "Poppins", sans-serif;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 7px 20px rgba(37, 99, 235, 0.25);
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .quote-btn:hover {
-    background: #1d4ed8;
+  background: #1f57d4;
 
-    transform: translateY(-2px);
+  transform: translateY(-2px);
 
-    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.30);
+  box-shadow:
+    0 12px 28px rgba(37, 99, 235, 0.35);
+}
+
+.quote-btn:active {
+  transform: translateY(0);
 }
 
 
-/* =========================
-   MOBILE MENU ICON
-========================= */
+/* =====================================================
+   MOBILE MENU BUTTON
+===================================================== */
 
 .mobile-menu {
-    display: none;
+  display: none;
 
-    color: #ffffff;
+  width: 44px;
+  height: 44px;
 
-    font-size: 26px;
+  align-items: center;
+  justify-content: center;
 
-    cursor: pointer;
+  border: none;
+  border-radius: 10px;
 
-    z-index: 10001;
+  background: transparent;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.mobile-menu:hover {
+  background: rgba(255, 255, 255, 0.08);
+
+  color: #19c1b2;
 }
 
 
-/* =========================
-   TABLET / MOBILE
-========================= */
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .nav-menu {
+    gap: 24px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+  .quote-btn {
+    min-width: 155px;
+
+    padding: 13px 20px;
+
+    font-size: 13px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE / TABLET MENU
+===================================================== */
 
 @media (max-width: 992px) {
 
-    .navbar {
-        height: 76px;
-        padding: 0 6%;
-    }
+  .navbar {
+    height: 76px;
 
-    .mobile-menu {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+    padding: 0 5%;
+  }
 
-    .nav-menu {
-        position: fixed;
+  .mobile-menu {
+    display: flex;
 
-        top: 76px;
-        right: -100%;
+    position: relative;
 
-        width: 300px;
-        height: calc(100vh - 76px);
+    z-index: 10002;
+  }
 
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
 
-        gap: 25px;
+  /* Mobile navigation */
 
-        padding: 40px 30px;
+  .nav-menu {
+    position: fixed;
 
-        background: #0f172a;
+    top: 76px;
+    right: -100%;
 
-        border-left: 1px solid rgba(255, 255, 255, 0.08);
+    width: 320px;
+    height: calc(100vh - 76px);
 
-        box-shadow: -10px 0 35px rgba(0, 0, 0, 0.20);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
-        transition: right 0.35s ease;
-    }
+    gap: 0;
 
-    .nav-menu.active {
-        right: 0;
-    }
+    padding: 35px 30px;
 
-    .nav-menu a {
-        font-size: 17px;
-        width: 100%;
-    }
+    background: #0f172a;
 
-    .nav-menu a::after {
-        left: 0;
-        transform: none;
-    }
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
 
-    .nav-menu a:hover::after,
-    .nav-menu a.active::after {
-        width: 35px;
-    }
+    box-shadow:
+      -15px 0 40px rgba(0, 0, 0, 0.25);
 
-    .quote-btn {
-        width: 100%;
-        margin-top: 8px;
-        padding: 13px 20px;
-    }
+    overflow-y: auto;
+
+    transition: right 0.35s ease;
+  }
+
+
+  /* Open menu */
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+
+  /* Mobile links */
+
+  .nav-link {
+    width: 100%;
+
+    height: auto;
+
+    padding: 16px 5px;
+
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+
+  /* Mobile underline */
+
+  .nav-link::after {
+    left: 5px;
+    bottom: 7px;
+
+    transform: none;
+
+    height: 2px;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 38px;
+  }
+
+
+  /* Mobile quote */
+
+  .quote-btn {
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 14px 20px;
+
+    font-size: 14px;
+  }
 }
 
 
-/* =========================
+/* =====================================================
    SMALL MOBILE
-========================= */
+===================================================== */
 
 @media (max-width: 576px) {
 
-    .navbar {
-        height: 70px;
-        padding: 0 5%;
-    }
+  .navbar {
+    height: 70px;
 
-    .logo h2 {
-        font-size: 24px;
-    }
+    padding: 0 5%;
+  }
 
-    .nav-menu {
-        top: 70px;
 
-        width: 100%;
-        height: calc(100vh - 70px);
+  /* Logo */
 
-        padding: 35px 25px;
-    }
+  .logo h2 {
+    font-size: 25px;
 
-    .nav-menu a {
-        font-size: 18px;
-    }
+    letter-spacing: -1px;
+  }
+
+
+  /* Menu */
+
+  .mobile-menu {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  /* Navigation */
+
+  .nav-menu {
+    top: 70px;
+
+    width: 100%;
+
+    height: calc(100vh - 70px);
+
+    padding: 30px 25px;
+  }
+
+
+  .nav-link {
+    font-size: 17px;
+
+    padding: 15px 5px;
+  }
+}
+
+
+/* =====================================================
+   EXTRA SMALL DEVICES
+===================================================== */
+
+@media (max-width: 360px) {
+
+  .logo h2 {
+    font-size: 22px;
+  }
+
+  .mobile-menu {
+    width: 40px;
+    height: 40px;
+  }
 }

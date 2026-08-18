@@ -7,28 +7,40 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+  const closeMenu = () => {
+    setMenuOpen(false);
   };
 
-  // Logo → Home + Direct Top
+  // Logo → Home
   const handleLogo = () => {
-    setMenuOpen(false);
+    closeMenu();
     navigate("/");
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
-  // Quote → Contact + Direct Top
+  // Get Free Quote → Contact
   const handleQuote = () => {
-    setMenuOpen(false);
+    closeMenu();
     navigate("/contact");
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
-  // Navigation click
+  // Navigation
   const handleNavClick = () => {
-    setMenuOpen(false);
-    window.scrollTo(0, 0);
+    closeMenu();
+
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, 50);
   };
 
   return (
@@ -37,7 +49,6 @@ function Navbar() {
       {/* =========================
           LOGO
       ========================= */}
-
       <div
         className="logo"
         onClick={handleLogo}
@@ -58,78 +69,73 @@ function Navbar() {
       {/* =========================
           NAVIGATION
       ========================= */}
-
-      <nav className={menuOpen ? "nav-menu active" : "nav-menu"}>
+      <nav className={`nav-menu ${menuOpen ? "active" : ""}`}>
 
         <NavLink
           to="/"
           onClick={handleNavClick}
           className={({ isActive }) =>
-            isActive ? "active" : ""
+            isActive ? "nav-link active" : "nav-link"
           }
         >
           Home
         </NavLink>
 
-
         <NavLink
           to="/about"
           onClick={handleNavClick}
           className={({ isActive }) =>
-            isActive ? "active" : ""
+            isActive ? "nav-link active" : "nav-link"
           }
         >
           About
         </NavLink>
 
-
         <NavLink
           to="/services"
           onClick={handleNavClick}
           className={({ isActive }) =>
-            isActive ? "active" : ""
+            isActive ? "nav-link active" : "nav-link"
           }
         >
           Services
         </NavLink>
 
-
         <NavLink
           to="/portfolio"
           onClick={handleNavClick}
           className={({ isActive }) =>
-            isActive ? "active" : ""
+            isActive ? "nav-link active" : "nav-link"
           }
         >
           Portfolio
         </NavLink>
 
-
         <NavLink
           to="/careers"
           onClick={handleNavClick}
           className={({ isActive }) =>
-            isActive ? "active" : ""
+            isActive ? "nav-link active" : "nav-link"
           }
         >
           Careers
         </NavLink>
 
-
         <NavLink
           to="/contact"
           onClick={handleNavClick}
           className={({ isActive }) =>
-            isActive ? "active" : ""
+            isActive ? "nav-link active" : "nav-link"
           }
         >
           Contact
         </NavLink>
 
-
-        {/* Quote Button */}
-
+        {/* =========================
+            QUOTE BUTTON
+        ========================= */}
         <button
+          type="button"
           className="quote-btn"
           onClick={handleQuote}
         >
@@ -140,19 +146,21 @@ function Navbar() {
 
 
       {/* =========================
-          MOBILE MENU
+          MOBILE MENU BUTTON
       ========================= */}
-
-      <div
+      <button
+        type="button"
         className="mobile-menu"
-        onClick={toggleMenu}
+        onClick={() => setMenuOpen((prev) => !prev)}
+        aria-label={menuOpen ? "Close menu" : "Open menu"}
+        aria-expanded={menuOpen}
       >
         {menuOpen ? (
-          <FaTimes size={24} />
+          <FaTimes size={23} />
         ) : (
-          <FaBars size={24} />
+          <FaBars size={23} />
         )}
-      </div>
+      </button>
 
     </header>
   );
