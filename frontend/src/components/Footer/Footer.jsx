@@ -95,7 +95,7 @@ function Footer() {
 
           <p>Pune, Maharashtra</p>
 
-          <p>info@pavium.in</p>
+          <p>pavium.tech@gmail.com</p>
 
           <p>+91 XXXXX XXXXX</p>
 
