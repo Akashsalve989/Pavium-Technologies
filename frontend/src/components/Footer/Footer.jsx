@@ -25,13 +25,26 @@ function Footer() {
 
           <div className="social-links">
 
-            <a href="#"><FaFacebookF /></a>
+            <a href="#" aria-label="Facebook">
+              <FaFacebookF />
+            </a>
 
-            <a href="#"><FaInstagram /></a>
+            <a href="#" aria-label="Instagram">
+              <FaInstagram />
+            </a>
 
-            <a href="#"><pavium-tech-56024742b/></a>
+            <a
+              href="https://www.linkedin.com/company/pavium-tech-56024742b/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedinIn />
+            </a>
 
-            <a href="#"><FaGithub /></a>
+            <a href="#" aria-label="GitHub">
+              <FaGithub />
+            </a>
 
           </div>
 
@@ -99,7 +112,7 @@ function Footer() {
 
           <p>+91 XXXXX XXXXX</p>
 
-          <p>Mon - fri | 9 AM - 7 PM</p>
+          <p>Mon - Fri | 9 AM - 7 PM</p>
 
         </div>
 
