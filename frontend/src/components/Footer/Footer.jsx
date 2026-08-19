@@ -99,7 +99,7 @@ function Footer() {
 
           <p>+91 XXXXX XXXXX</p>
 
-          <p>Mon - Sat | 9 AM - 7 PM</p>
+          <p>Mon - fri | 9 AM - 7 PM</p>
 
         </div>
 
