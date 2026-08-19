@@ -41,7 +41,7 @@ function Contact() {
             <FaEnvelope className="info-icon"/>
             <div>
               <h3>Email</h3>
-              <p>info@pavium.in</p>
+              <p>pavium.tech@gmail.com</p>
             </div>
           </div>
 
