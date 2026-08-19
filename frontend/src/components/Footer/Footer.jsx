@@ -126,7 +126,7 @@ function Footer() {
 
           <p>pavium.tech@gmail.com</p>
 
-          <p>+91 XXXXX XXXXX</p>
+          <p>+91 91751 45098</p>
 
           <p>Mon - Fri | 9 AM - 7 PM</p>
 
