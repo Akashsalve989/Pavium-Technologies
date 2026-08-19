@@ -29,7 +29,7 @@ function Footer() {
 
             <a href="#"><FaInstagram /></a>
 
-            <a href="#"><FaLinkedinIn /></a>
+            <a href="#"><pavium-tech-56024742b/></a>
 
             <a href="#"><FaGithub /></a>
 
