@@ -77,7 +77,7 @@ body {
 }
 
 .logo span {
-  color: #16b8aa;
+  color: #38bdf8;
 
   transition: color 0.3s ease;
 }
@@ -87,7 +87,7 @@ body {
 }
 
 .logo:hover span {
-  color: #20cbbd;
+  color: #60a5fa;
 }
 
 
