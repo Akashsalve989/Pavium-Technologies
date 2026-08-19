@@ -31,7 +31,7 @@ function FloatingButtons() {
       ========================= */}
 
       <a
-        href="https://wa.me/91XXXXXXXXXX?text=Hello%20PaviumTech%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+        href="https://wa.me/919175145098?text=Hello%20PaviumTech%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-btn"
