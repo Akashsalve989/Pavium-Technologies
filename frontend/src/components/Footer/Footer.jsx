@@ -13,9 +13,12 @@ function Footer() {
 
       <div className="footer-container">
 
+        {/* Company Info */}
         <div className="footer-box">
 
-          <h2>Pavium<span>Tech</span></h2>
+          <h2>
+            Pavium<span>Tech</span>
+          </h2>
 
           <p>
             Pavium Technologies is a Software Development &
@@ -23,13 +26,20 @@ function Footer() {
             solutions for startups, businesses and enterprises.
           </p>
 
+          {/* Social Links */}
           <div className="social-links">
 
-            <a href="#" aria-label="Facebook">
+            <a
+              href="#"
+              aria-label="Facebook"
+            >
               <FaFacebookF />
             </a>
 
-            <a href="#" aria-label="Instagram">
+            <a
+              href="#"
+              aria-label="Instagram"
+            >
               <FaInstagram />
             </a>
 
@@ -37,12 +47,15 @@ function Footer() {
               href="https://www.linkedin.com/company/pavium-tech-56024742b/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="LinkedIn"
+              aria-label="PaviumTech LinkedIn"
             >
               <FaLinkedinIn />
             </a>
 
-            <a href="#" aria-label="GitHub">
+            <a
+              href="#"
+              aria-label="GitHub"
+            >
               <FaGithub />
             </a>
 
@@ -50,6 +63,7 @@ function Footer() {
 
         </div>
 
+        {/* Quick Links */}
         <div className="footer-box">
 
           <h3>Quick Links</h3>
@@ -76,6 +90,7 @@ function Footer() {
 
         </div>
 
+        {/* Services */}
         <div className="footer-box">
 
           <h3>Services</h3>
@@ -102,6 +117,7 @@ function Footer() {
 
         </div>
 
+        {/* Contact */}
         <div className="footer-box">
 
           <h3>Contact</h3>
@@ -118,6 +134,7 @@ function Footer() {
 
       </div>
 
+      {/* Footer Bottom */}
       <div className="footer-bottom">
 
         <p>
