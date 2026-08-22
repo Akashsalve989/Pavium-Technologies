@@ -36,3 +36,119 @@ button{
 section{
   width:100%;
 }
+/* =====================================================
+   GLOBAL MOBILE FIX
+===================================================== */
+
+@media (max-width: 768px) {
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  #root {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  section {
+    max-width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+
+/* =====================================================
+   MOBILE CONTAINER FIX
+===================================================== */
+
+@media (max-width: 576px) {
+
+  .services,
+  .technologies,
+  .process,
+  .why,
+  .portfolio,
+  .contact,
+  .careers,
+  .industries,
+  .testimonials {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+
+  /* Headings */
+
+  .services-heading,
+  .tech-heading,
+  .process-heading,
+  .why-heading,
+  .portfolio-title,
+  .contact-header,
+  .careers-heading,
+  .industries-title,
+  .testimonial-title {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+  /* Grids */
+
+  .services-grid,
+  .tech-grid,
+  .why-grid,
+  .portfolio-grid,
+  .career-grid,
+  .industry-grid,
+  .testimonial-grid {
+    width: 100%;
+    max-width: 100%;
+  }
+
+
+  /* Long text */
+
+  h1,
+  h2,
+  h3,
+  p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+
+  .services,
+  .technologies,
+  .process,
+  .why,
+  .portfolio,
+  .contact,
+  .careers,
+  .industries,
+  .testimonials {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
