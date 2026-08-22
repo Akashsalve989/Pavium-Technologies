@@ -106,7 +106,7 @@ function Contact() {
 
             <div>
               <h3>Working Hours</h3>
-              <p>Mon - Sat | 9:00 AM - 7:00 PM</p>
+              <p>Mon - Fri | 9:00 AM - 5:00 PM</p>
             </div>
           </div>
 

@@ -1,0 +1,211 @@
+.services-page {
+  padding: 120px 8% 80px;
+  background: #f8fbfc;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header */
+
+.services-header {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 65px;
+}
+
+.services-header > span {
+  color: #0b8f87;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.services-header h1 {
+  margin: 12px 0;
+  font-size: 48px;
+  color: #102a43;
+}
+
+.services-header p {
+  color: #6b7c93;
+  line-height: 1.7;
+}
+
+/* Section */
+
+.service-section {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-heading {
+  margin-bottom: 28px;
+}
+
+.section-heading h2 {
+  font-size: 32px;
+  color: #102a43;
+  margin-bottom: 5px;
+}
+
+.section-heading p {
+  color: #718096;
+}
+
+/* IT Cards */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.service-card {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 16px;
+  border: 1px solid #e4edf0;
+  transition: 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px rgba(16, 42, 67, 0.1);
+  border-color: #0b8f87;
+}
+
+.service-number {
+  color: #0b8f87;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  color: #102a43;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: #718096;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.service-card span {
+  color: #0b8f87;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Medical Coding */
+
+.medical-section {
+  max-width: 1200px;
+  margin: 80px auto 0;
+  padding: 50px;
+  background: linear-gradient(135deg, #eafaf8, #f3faff);
+  border: 1px solid #d8efec;
+  border-radius: 24px;
+}
+
+.medical-heading > span {
+  color: #0b8f87;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.medical-heading h2 {
+  color: #102a43;
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.medical-heading p {
+  max-width: 750px;
+  color: #60758a;
+  line-height: 1.7;
+}
+
+/* Medical Items */
+
+.medical-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 30px 0;
+}
+
+.medical-item {
+  background: #ffffff;
+  padding: 14px 16px;
+  border-radius: 9px;
+  border: 1px solid #e2eeee;
+  color: #334e68;
+  font-size: 13px;
+}
+
+.medical-item span {
+  color: #0b8f87;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+/* Button */
+
+.medical-btn {
+  background: #0b8f87;
+  color: #ffffff;
+  border: none;
+  padding: 13px 24px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.medical-btn:hover {
+  background: #08756f;
+  transform: translateY(-2px);
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .medical-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .services-page {
+    padding: 90px 5% 60px;
+  }
+
+  .services-header h1 {
+    font-size: 36px;
+  }
+
+  .services-grid,
+  .medical-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .medical-section {
+    padding: 30px 22px;
+  }
+
+  .medical-heading h2 {
+    font-size: 28px;
+  }
+}
