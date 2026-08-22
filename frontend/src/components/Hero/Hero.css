@@ -1,4 +1,13 @@
+/* =====================================================
+   GOOGLE FONT
+===================================================== */
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+
+/* =====================================================
+   GLOBAL
+===================================================== */
 
 * {
   margin: 0;
@@ -14,6 +23,27 @@ html {
 body {
   background: #ffffff;
   overflow-x: hidden;
+}
+
+
+/* =====================================================
+   COLOR SYSTEM
+===================================================== */
+
+:root {
+  --primary: #6c4df6;
+  --primary-dark: #5038c6;
+  --primary-light: #f5f3ff;
+
+  --accent: #14b8a6;
+  --accent-light: #ecfdf9;
+
+  --heading: #111827;
+  --text: #64748b;
+  --text-dark: #475569;
+
+  --border: #e5e7eb;
+  --white: #ffffff;
 }
 
 
@@ -38,12 +68,12 @@ body {
   background:
     radial-gradient(
       circle at 85% 15%,
-      rgba(20, 184, 166, 0.11),
-      transparent 28%
+      rgba(108, 77, 246, 0.13),
+      transparent 30%
     ),
     radial-gradient(
       circle at 10% 85%,
-      rgba(15, 23, 42, 0.045),
+      rgba(20, 184, 166, 0.08),
       transparent 25%
     ),
     #ffffff;
@@ -51,7 +81,7 @@ body {
 
 
 /* =====================================================
-   DECORATIVE BACKGROUND
+   DECORATIVE BACKGROUND - TOP RIGHT
 ===================================================== */
 
 .hero::before {
@@ -67,12 +97,17 @@ body {
 
   border-radius: 50%;
 
-  background: rgba(20, 184, 166, 0.08);
+  background: rgba(108, 77, 246, 0.10);
 
   filter: blur(85px);
 
   pointer-events: none;
 }
+
+
+/* =====================================================
+   DECORATIVE BACKGROUND - BOTTOM LEFT
+===================================================== */
 
 .hero::after {
   content: "";
@@ -87,7 +122,7 @@ body {
 
   border-radius: 50%;
 
-  background: rgba(15, 23, 42, 0.045);
+  background: rgba(20, 184, 166, 0.07);
 
   filter: blur(80px);
 
@@ -129,13 +164,13 @@ body {
 
   margin-bottom: 28px;
 
-  border: 1px solid #ccfbf1;
+  border: 1px solid #ddd6fe;
 
   border-radius: 50px;
 
-  background: rgba(240, 253, 250, 0.9);
+  background: rgba(245, 243, 255, 0.92);
 
-  color: #087f73;
+  color: #5b3fd4;
 
   font-size: 13px;
 
@@ -144,8 +179,13 @@ body {
   letter-spacing: 0.25px;
 
   box-shadow:
-    0 8px 25px rgba(20, 184, 166, 0.07);
+    0 8px 25px rgba(108, 77, 246, 0.08);
 }
+
+
+/* =====================================================
+   BADGE DOT
+===================================================== */
 
 .badge-dot {
   width: 8px;
@@ -155,10 +195,10 @@ body {
 
   border-radius: 50%;
 
-  background: #14b8a6;
+  background: var(--primary);
 
   box-shadow:
-    0 0 0 5px rgba(20, 184, 166, 0.12);
+    0 0 0 5px rgba(108, 77, 246, 0.12);
 }
 
 
@@ -171,7 +211,7 @@ body {
 
   margin: 0 auto 25px;
 
-  color: #111827;
+  color: var(--heading);
 
   font-size: clamp(48px, 5.5vw, 70px);
 
@@ -182,8 +222,13 @@ body {
   letter-spacing: -2.8px;
 }
 
+
+/* =====================================================
+   HEADING HIGHLIGHT
+===================================================== */
+
 .hero h1 span {
-  color: #0f9f8f;
+  color: var(--primary);
 }
 
 
@@ -196,7 +241,7 @@ body {
 
   margin: 0 auto 37px;
 
-  color: #64748b;
+  color: var(--text);
 
   font-size: 17px;
 
@@ -207,7 +252,7 @@ body {
 
 
 /* =====================================================
-   BUTTONS
+   BUTTON CONTAINER
 ===================================================== */
 
 .hero-buttons {
@@ -222,7 +267,9 @@ body {
 }
 
 
-/* Primary */
+/* =====================================================
+   PRIMARY BUTTON
+===================================================== */
 
 .primary-btn {
   display: inline-flex;
@@ -240,7 +287,11 @@ body {
 
   border-radius: 10px;
 
-  background: #0f9f8f;
+  background: linear-gradient(
+    135deg,
+    #6c4df6,
+    #7c5cff
+  );
 
   color: #ffffff;
 
@@ -251,7 +302,7 @@ body {
   cursor: pointer;
 
   box-shadow:
-    0 10px 25px rgba(15, 159, 143, 0.20);
+    0 10px 25px rgba(108, 77, 246, 0.22);
 
   transition:
     transform 0.3s ease,
@@ -259,21 +310,37 @@ body {
     box-shadow 0.3s ease;
 }
 
+
+/* =====================================================
+   PRIMARY BUTTON HOVER
+===================================================== */
+
 .primary-btn:hover {
-  background: #087f73;
+  background: linear-gradient(
+    135deg,
+    #5038c6,
+    #6c4df6
+  );
 
   transform: translateY(-3px);
 
   box-shadow:
-    0 14px 30px rgba(15, 159, 143, 0.28);
+    0 15px 32px rgba(108, 77, 246, 0.30);
 }
+
+
+/* =====================================================
+   PRIMARY BUTTON ICON
+===================================================== */
 
 .primary-btn svg {
   font-size: 13px;
 }
 
 
-/* Secondary */
+/* =====================================================
+   SECONDARY BUTTON
+===================================================== */
 
 .secondary-btn {
   display: inline-flex;
@@ -285,13 +352,13 @@ body {
 
   padding: 13.5px 28px;
 
-  border: 1.5px solid #0f9f8f;
+  border: 1.5px solid #c4b5fd;
 
   border-radius: 10px;
 
   background: #ffffff;
 
-  color: #087f73;
+  color: #5b3fd4;
 
   font-size: 14px;
 
@@ -302,16 +369,24 @@ body {
   transition:
     transform 0.3s ease,
     background 0.3s ease,
-    box-shadow 0.3s ease;
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
+
+/* =====================================================
+   SECONDARY BUTTON HOVER
+===================================================== */
+
 .secondary-btn:hover {
-  background: #f0fdfa;
+  background: #f5f3ff;
+
+  border-color: #8b74f8;
 
   transform: translateY(-3px);
 
   box-shadow:
-    0 8px 20px rgba(15, 159, 143, 0.10);
+    0 8px 22px rgba(108, 77, 246, 0.12);
 }
 
 
@@ -332,6 +407,11 @@ body {
   margin-bottom: 24px;
 }
 
+
+/* =====================================================
+   HIGHLIGHT ITEM
+===================================================== */
+
 .hero-highlights div {
   display: flex;
 
@@ -339,15 +419,20 @@ body {
 
   gap: 8px;
 
-  color: #475569;
+  color: var(--text-dark);
 
   font-size: 13px;
 
   font-weight: 500;
 }
 
+
+/* =====================================================
+   HIGHLIGHT ICON
+===================================================== */
+
 .hero-highlights svg {
-  color: #0f9f8f;
+  color: var(--accent);
 
   font-size: 14px;
 
@@ -370,6 +455,11 @@ body {
   gap: 9px;
 }
 
+
+/* =====================================================
+   TECHNOLOGY TAG
+===================================================== */
+
 .hero-tags span {
   display: inline-flex;
 
@@ -378,13 +468,13 @@ body {
 
   padding: 7px 14px;
 
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
 
   border-radius: 30px;
 
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.90);
 
-  color: #64748b;
+  color: var(--text);
 
   font-size: 11.5px;
 
@@ -394,22 +484,31 @@ body {
     transform 0.3s ease,
     border-color 0.3s ease,
     background 0.3s ease,
-    color 0.3s ease;
-}
-
-.hero-tags span:hover {
-  border-color: #99f6e4;
-
-  background: #f0fdfa;
-
-  color: #087f73;
-
-  transform: translateY(-2px);
+    color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 
 /* =====================================================
-   TABLET
+   TECHNOLOGY TAG HOVER
+===================================================== */
+
+.hero-tags span:hover {
+  border-color: #c4b5fd;
+
+  background: #f5f3ff;
+
+  color: #5b3fd4;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 5px 15px rgba(108, 77, 246, 0.08);
+}
+
+
+/* =====================================================
+   TABLET - 1200px
 ===================================================== */
 
 @media (max-width: 1200px) {
@@ -431,7 +530,7 @@ body {
 
 
 /* =====================================================
-   992px
+   TABLET - 992px
 ===================================================== */
 
 @media (max-width: 992px) {
@@ -455,7 +554,7 @@ body {
 
 
 /* =====================================================
-   MOBILE
+   MOBILE - 768px
 ===================================================== */
 
 @media (max-width: 768px) {
@@ -468,6 +567,9 @@ body {
     align-items: center;
   }
 
+
+  /* Badge */
+
   .hero-badge {
     padding: 9px 16px;
 
@@ -475,6 +577,9 @@ body {
 
     font-size: 11px;
   }
+
+
+  /* Heading */
 
   .hero h1 {
     font-size: 40px;
@@ -486,6 +591,9 @@ body {
     margin-bottom: 20px;
   }
 
+
+  /* Description */
+
   .hero-description {
     font-size: 15.5px;
 
@@ -493,6 +601,9 @@ body {
 
     margin-bottom: 30px;
   }
+
+
+  /* Buttons */
 
   .hero-buttons {
     flex-direction: column;
@@ -504,6 +615,7 @@ body {
     margin-bottom: 30px;
   }
 
+
   .primary-btn,
   .secondary-btn {
     width: 100%;
@@ -513,19 +625,27 @@ body {
     min-width: 0;
   }
 
+
+  /* Highlights */
+
   .hero-highlights {
     gap: 13px 20px;
 
     margin-bottom: 20px;
   }
 
+
   .hero-highlights div {
     font-size: 11.5px;
   }
 
+
+  /* Tags */
+
   .hero-tags {
     gap: 7px;
   }
+
 
   .hero-tags span {
     padding: 7px 11px;
@@ -536,7 +656,7 @@ body {
 
 
 /* =====================================================
-   SMALL MOBILE
+   SMALL MOBILE - 480px
 ===================================================== */
 
 @media (max-width: 480px) {
@@ -547,6 +667,9 @@ body {
     padding: 105px 5% 50px;
   }
 
+
+  /* Badge */
+
   .hero-badge {
     padding: 8px 13px;
 
@@ -555,10 +678,14 @@ body {
     margin-bottom: 20px;
   }
 
+
   .badge-dot {
     width: 7px;
     height: 7px;
   }
+
+
+  /* Heading */
 
   .hero h1 {
     font-size: 32px;
@@ -570,6 +697,9 @@ body {
     margin-bottom: 18px;
   }
 
+
+  /* Description */
+
   .hero-description {
     font-size: 14px;
 
@@ -577,6 +707,9 @@ body {
 
     margin-bottom: 27px;
   }
+
+
+  /* Buttons */
 
   .primary-btn,
   .secondary-btn {
@@ -586,6 +719,9 @@ body {
 
     font-size: 14px;
   }
+
+
+  /* Highlights */
 
   .hero-highlights {
     display: grid;
@@ -597,15 +733,20 @@ body {
     width: 100%;
   }
 
+
   .hero-highlights div {
     justify-content: center;
 
     font-size: 10.5px;
   }
 
+
+  /* Tags */
+
   .hero-tags {
     gap: 6px;
   }
+
 
   .hero-tags span {
     padding: 6px 10px;
@@ -616,23 +757,27 @@ body {
 
 
 /* =====================================================
-   VERY SMALL MOBILE
+   VERY SMALL MOBILE - 360px
 ===================================================== */
 
 @media (max-width: 360px) {
 
   .hero {
     padding-left: 4%;
+
     padding-right: 4%;
   }
+
 
   .hero h1 {
     font-size: 29px;
   }
 
+
   .hero-description {
     font-size: 13.5px;
   }
+
 
   .hero-highlights div {
     font-size: 10px;

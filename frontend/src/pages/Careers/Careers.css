@@ -1,254 +1,487 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
+/* =====================================================
+   CAREERS SECTION
+===================================================== */
 
 .careers {
-    padding: 120px 8%;
-    background: #F8FAFC;
-    min-height: 100vh;
+  position: relative;
+
+  width: 100%;
+
+  padding: 120px 8%;
+
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 8% 12%,
+      rgba(108, 77, 246, 0.09),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 92% 85%,
+      rgba(20, 184, 166, 0.07),
+      transparent 28%
+    ),
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f8fafc 100%
+    );
 }
 
-/* =========================
-   HEADER
-========================= */
+
+/* =====================================================
+   BACKGROUND DECORATION
+===================================================== */
+
+.careers::before {
+  content: "";
+
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  top: -220px;
+  right: -170px;
+
+  border-radius: 50%;
+
+  background: rgba(108, 77, 246, 0.075);
+
+  filter: blur(85px);
+
+  pointer-events: none;
+}
+
+.careers::after {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  bottom: -190px;
+  left: -160px;
+
+  border-radius: 50%;
+
+  background: rgba(20, 184, 166, 0.06);
+
+  filter: blur(80px);
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   CAREERS HEADER
+===================================================== */
 
 .careers-heading {
-    text-align: center;
-    max-width: 780px;
-    margin: 0 auto 65px;
+  position: relative;
+
+  z-index: 2;
+
+  text-align: center;
+
+  max-width: 780px;
+
+  margin: 0 auto 65px;
 }
 
-.careers-heading span {
-    display: inline-block;
-    background: #ECFDF5;
-    color: #047857;
-    padding: 9px 20px;
-    border-radius: 50px;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
+
+/* =====================================================
+   HEADER BADGE
+===================================================== */
+
+.careers-heading > span {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #f5f3ff;
+
+  border: 1px solid #ddd6fe;
+
+  color: #6c4df6;
+
+  padding: 9px 20px;
+
+  border-radius: 50px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
 }
+
+
+/* =====================================================
+   MAIN HEADING
+===================================================== */
 
 .careers-heading h2 {
-    margin: 20px 0 15px;
-    font-size: 48px;
-    line-height: 1.2;
-    color: #0F172A;
-    font-weight: 700;
-    letter-spacing: -1px;
+  margin: 20px 0 15px;
+
+  font-size: 48px;
+
+  line-height: 1.2;
+
+  color: #111827;
+
+  font-weight: 800;
+
+  letter-spacing: -1.2px;
 }
+
+
+/* =====================================================
+   HEADING HIGHLIGHT
+===================================================== */
+
+.careers-heading h2 span {
+  color: #6c4df6;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
 
 .careers-heading p {
-    color: #64748B;
-    font-size: 16px;
-    line-height: 1.8;
+  color: #64748b;
+
+  font-size: 16px;
+
+  line-height: 1.8;
 }
 
-/* =========================
+
+/* =====================================================
    JOB GRID
-========================= */
+===================================================== */
 
 .career-grid {
-    max-width: 1250px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
+  position: relative;
 
-/* =========================
+  z-index: 2;
+
+  max-width: 1250px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 25px;
+}
+/* =====================================================
    CAREER CARD
-========================= */
+===================================================== */
 
 .career-card {
-    position: relative;
-    background: #FFFFFF;
-    border: 1px solid #E2E8F0;
-    border-radius: 18px;
-    padding: 30px;
-    overflow: hidden;
-    transition: all 0.35s ease;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 320px;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 20px;
+
+  padding: 30px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.055);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
 }
 
-.career-card::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 3px;
-    background: #10B981;
-    transition: width 0.35s ease;
+
+/* =====================================================
+   TOP ACCENT
+===================================================== */
+
+.career-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 0;
+  height: 3px;
+
+  background: linear-gradient(
+    90deg,
+    #6c4df6,
+    #14b8a6
+  );
+
+  transition: width 0.4s ease;
 }
+
+
+/* =====================================================
+   CARD HOVER
+===================================================== */
 
 .career-card:hover {
-    transform: translateY(-8px);
-    border-color: #A7F3D0;
-    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+  transform: translateY(-9px);
+
+  border-color: #c4b5fd;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 22px 50px rgba(108, 77, 246, 0.13);
 }
 
-.career-card:hover::after {
-    width: 100%;
+.career-card:hover::before {
+  width: 100%;
 }
 
-/* =========================
-   ICON
-========================= */
+
+/* =====================================================
+   CAREER ICON
+===================================================== */
 
 .career-icon {
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #ECFDF5;
-    color: #059669;
-    border-radius: 15px;
-    font-size: 25px;
-    margin-bottom: 22px;
+  position: relative;
+
+  z-index: 1;
+
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #f5f3ff;
+
+  color: #6c4df6;
+
+  border-radius: 16px;
+
+  font-size: 26px;
+
+  margin-bottom: 22px;
+
+  box-shadow:
+    inset 0 0 0 1px rgba(108, 77, 246, 0.08);
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    color 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
-/* =========================
+
+/* =====================================================
+   ICON HOVER
+===================================================== */
+
+.career-card:hover .career-icon {
+  background: linear-gradient(
+    135deg,
+    #6c4df6,
+    #7c5cff
+  );
+
+  color: #ffffff;
+
+  transform:
+    translateY(-3px)
+    scale(1.07);
+
+  box-shadow:
+    0 11px 25px rgba(108, 77, 246, 0.22);
+}
+
+
+/* =====================================================
    JOB TITLE
-========================= */
+===================================================== */
 
 .career-card h3 {
-    font-size: 20px;
-    color: #0F172A;
-    font-weight: 600;
-    margin-bottom: 18px;
+  position: relative;
+
+  z-index: 1;
+
+  font-size: 20px;
+
+  color: #111827;
+
+  font-weight: 700;
+
+  margin-bottom: 18px;
+
+  line-height: 1.35;
+
+  transition: color 0.3s ease;
 }
 
-/* =========================
+
+/* =====================================================
+   TITLE HOVER
+===================================================== */
+
+.career-card:hover h3 {
+  color: #6c4df6;
+}
+
+
+/* =====================================================
    JOB DETAILS
-========================= */
+===================================================== */
 
 .career-card p {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    color: #64748B;
-    font-size: 14px;
-    margin-bottom: 12px;
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  margin-bottom: 12px;
+
+  line-height: 1.5;
 }
+
+
+/* =====================================================
+   JOB DETAIL ICON
+===================================================== */
 
 .career-card p svg {
-    color: #10B981;
+  color: #14a895;
+
+  font-size: 14px;
+
+  flex-shrink: 0;
 }
 
-/* =========================
-   JOB TYPE
-========================= */
 
-.career-card span {
-    display: inline-block;
-    padding: 7px 15px;
-    background: #ECFDF5;
-    color: #047857;
-    border-radius: 50px;
-    font-size: 12px;
-    font-weight: 600;
-    margin: 10px 0 25px;
+/* =====================================================
+   JOB TYPE BADGE
+===================================================== */
+
+.career-card > span {
+  position: relative;
+
+  z-index: 1;
+
+  display: inline-block;
+
+  width: fit-content;
+
+  padding: 7px 15px;
+
+  background: #f5f3ff;
+
+  border: 1px solid #ddd6fe;
+
+  color: #6c4df6;
+
+  border-radius: 50px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  margin: 10px 0 25px;
 }
 
-/* =========================
+
+/* =====================================================
    APPLY BUTTON
-========================= */
+===================================================== */
 
 .career-card button {
-    width: 100%;
-    padding: 13px 18px;
-    border: none;
-    border-radius: 10px;
-    background: #10B981;
-    color: #FFFFFF;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  position: relative;
+
+  z-index: 1;
+
+  width: 100%;
+
+  margin-top: auto;
+
+  padding: 13px 18px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    135deg,
+    #6c4df6,
+    #7c5cff
+  );
+
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(108, 77, 246, 0.18);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 }
+
+
+/* =====================================================
+   APPLY BUTTON HOVER
+===================================================== */
 
 .career-card button:hover {
-    background: #059669;
-    transform: translateY(-2px);
-}
+  background: linear-gradient(
+    135deg,
+    #5038c6,
+    #6c4df6
+  );
 
-/* =========================
-   TABLET
-========================= */
+  transform: translateY(-2px);
 
-@media (max-width: 1000px) {
-
-    .career-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 768px) {
-
-    .careers {
-        padding: 90px 7%;
-    }
-
-    .careers-heading {
-        margin-bottom: 45px;
-    }
-
-    .careers-heading h2 {
-        font-size: 36px;
-    }
-
-    .careers-heading p {
-        font-size: 15px;
-    }
-
-    .career-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .career-card {
-        padding: 26px;
-    }
-
-}
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media (max-width: 576px) {
-
-    .careers {
-        padding: 70px 6%;
-    }
-
-    .careers-heading h2 {
-        font-size: 30px;
-    }
-
-    .careers-heading p {
-        font-size: 14px;
-    }
-
-    .career-card {
-        padding: 24px;
-    }
-
-    .career-icon {
-        width: 55px;
-        height: 55px;
-        font-size: 22px;
-    }
-
+  box-shadow:
+    0 12px 26px rgba(108, 77, 246, 0.27);
 }

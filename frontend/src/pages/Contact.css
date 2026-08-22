@@ -1,283 +1,580 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
+
+
+/* =====================================================
+   CONTACT SECTION
+===================================================== */
 
 .contact {
-    padding: 120px 8% 90px;
-    background: #F8FAFC;
-    min-height: 100vh;
+  position: relative;
+
+  width: 100%;
+
+  padding: 120px 8% 90px;
+
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 8% 12%,
+      rgba(108, 77, 246, 0.09),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 92% 85%,
+      rgba(20, 184, 166, 0.07),
+      transparent 28%
+    ),
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f8fafc 100%
+    );
 }
 
-/* =========================
-   HEADER
-========================= */
+
+/* =====================================================
+   BACKGROUND DECORATION
+===================================================== */
+
+.contact::before {
+  content: "";
+
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  top: -220px;
+  right: -170px;
+
+  border-radius: 50%;
+
+  background: rgba(108, 77, 246, 0.075);
+
+  filter: blur(85px);
+
+  pointer-events: none;
+}
+
+.contact::after {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  bottom: -190px;
+  left: -160px;
+
+  border-radius: 50%;
+
+  background: rgba(20, 184, 166, 0.06);
+
+  filter: blur(80px);
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   CONTACT HEADER
+===================================================== */
 
 .contact-header {
-    text-align: center;
-    max-width: 760px;
-    margin: 0 auto 65px;
+  position: relative;
+
+  z-index: 2;
+
+  text-align: center;
+
+  max-width: 760px;
+
+  margin: 0 auto 65px;
 }
 
-.contact-header span {
-    display: inline-block;
-    background: #ECFDF5;
-    color: #047857;
-    padding: 9px 20px;
-    border-radius: 50px;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
+
+/* =====================================================
+   HEADER BADGE
+===================================================== */
+
+.contact-header > span {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 9px 20px;
+
+  border: 1px solid #ddd6fe;
+
+  border-radius: 50px;
+
+  background: #f5f3ff;
+
+  color: #6c4df6;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
 }
+
+
+/* =====================================================
+   MAIN TITLE
+===================================================== */
 
 .contact-header h1 {
-    margin: 20px 0 15px;
-    font-size: 48px;
-    line-height: 1.2;
-    color: #0F172A;
-    font-weight: 700;
-    letter-spacing: -1px;
+  margin: 20px 0 15px;
+
+  font-size: 48px;
+
+  line-height: 1.2;
+
+  color: #111827;
+
+  font-weight: 800;
+
+  letter-spacing: -1.2px;
 }
+
+
+/* =====================================================
+   TITLE HIGHLIGHT
+===================================================== */
+
+.contact-header h1 span {
+  color: #6c4df6;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
 
 .contact-header p {
-    max-width: 700px;
-    margin: auto;
-    color: #64748B;
-    font-size: 16px;
-    line-height: 1.8;
+  max-width: 700px;
+
+  margin: auto;
+
+  color: #64748b;
+
+  font-size: 16px;
+
+  line-height: 1.8;
 }
 
-/* =========================
+
+/* =====================================================
    MAIN CONTAINER
-========================= */
+===================================================== */
 
 .contact-container {
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 0.9fr 1.3fr;
-    gap: 30px;
-    align-items: stretch;
-}
+  position: relative;
 
-/* =========================
+  z-index: 2;
+
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.3fr;
+
+  gap: 30px;
+
+  align-items: stretch;
+}
+/* =====================================================
    CONTACT INFO
-========================= */
+===================================================== */
 
 .contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
 }
+
+
+/* =====================================================
+   INFO CARD
+===================================================== */
 
 .info-card {
-    background: #FFFFFF;
-    padding: 25px;
-    border: 1px solid #E2E8F0;
-    border-radius: 18px;
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    transition: all 0.3s ease;
+  position: relative;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  padding: 25px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 8px 25px rgba(15, 23, 42, 0.045);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
 }
+
+
+/* =====================================================
+   INFO CARD ACCENT
+===================================================== */
+
+.info-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 0;
+  height: 3px;
+
+  background: linear-gradient(
+    90deg,
+    #6c4df6,
+    #14b8a6
+  );
+
+  transition: width 0.4s ease;
+}
+
+
+/* =====================================================
+   INFO CARD HOVER
+===================================================== */
 
 .info-card:hover {
-    transform: translateY(-5px);
-    border-color: #A7F3D0;
-    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.07);
+  transform: translateY(-5px);
+
+  border-color: #c4b5fd;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 15px 35px rgba(108, 77, 246, 0.10);
 }
+
+.info-card:hover::before {
+  width: 100%;
+}
+
+
+/* =====================================================
+   INFO ICON
+===================================================== */
 
 .info-card svg {
-    min-width: 52px;
-    height: 52px;
-    padding: 13px;
-    border-radius: 14px;
-    background: #ECFDF5;
-    color: #059669;
-    font-size: 24px;
+  position: relative;
+
+  z-index: 1;
+
+  min-width: 52px;
+
+  width: 52px;
+  height: 52px;
+
+  padding: 13px;
+
+  border-radius: 14px;
+
+  background: #f5f3ff;
+
+  color: #6c4df6;
+
+  font-size: 24px;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
 }
+
+
+/* =====================================================
+   ICON HOVER
+===================================================== */
+
+.info-card:hover svg {
+  background: linear-gradient(
+    135deg,
+    #6c4df6,
+    #7c5cff
+  );
+
+  color: #ffffff;
+
+  transform: scale(1.07);
+
+  box-shadow:
+    0 8px 20px rgba(108, 77, 246, 0.20);
+}
+
+
+/* =====================================================
+   INFO TITLE
+===================================================== */
 
 .info-card h3 {
-    margin-bottom: 5px;
-    color: #0F172A;
-    font-size: 17px;
-    font-weight: 600;
+  margin-bottom: 5px;
+
+  color: #111827;
+
+  font-size: 17px;
+
+  font-weight: 600;
 }
+
+
+/* =====================================================
+   INFO DESCRIPTION
+===================================================== */
 
 .info-card p {
-    color: #64748B;
-    font-size: 14px;
-    line-height: 1.6;
+  color: #64748b;
+
+  font-size: 14px;
+
+  line-height: 1.6;
 }
 
-/* =========================
+
+/* =====================================================
    CONTACT FORM
-========================= */
+===================================================== */
 
 .contact-form {
-    background: #FFFFFF;
-    padding: 38px;
-    border: 1px solid #E2E8F0;
-    border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(15, 23, 42, 0.06);
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+  position: relative;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  padding: 38px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 15px 40px rgba(15, 23, 42, 0.06);
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+
+  overflow: hidden;
 }
+
+
+/* =====================================================
+   FORM TOP ACCENT
+===================================================== */
+
+.contact-form::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background: linear-gradient(
+    90deg,
+    #6c4df6,
+    #14b8a6
+  );
+}
+
+
+/* =====================================================
+   FORM HEADING
+===================================================== */
 
 .contact-form h2 {
-    color: #0F172A;
-    font-size: 25px;
-    margin-bottom: 3px;
+  color: #111827;
+
+  font-size: 25px;
+
+  font-weight: 700;
+
+  margin-bottom: 3px;
 }
+
+
+/* =====================================================
+   FORM DESCRIPTION
+===================================================== */
 
 .contact-form > p {
-    color: #64748B;
-    font-size: 13px;
-    margin-bottom: 8px;
+  color: #64748b;
+
+  font-size: 13px;
+
+  margin-bottom: 8px;
+
+  line-height: 1.6;
 }
 
-/* =========================
+
+/* =====================================================
    INPUTS
-========================= */
+===================================================== */
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
-    padding: 14px 16px;
-    border: 1px solid #E2E8F0;
-    border-radius: 11px;
-    background: #F8FAFC;
-    color: #0F172A;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    outline: none;
-    transition: all 0.3s ease;
+  width: 100%;
+
+  padding: 14px 16px;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 11px;
+
+  background: #f8fafc;
+
+  color: #111827;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
 }
 
+
+/* =====================================================
+   TEXTAREA
+===================================================== */
+
 .contact-form textarea {
-    min-height: 150px;
-    resize: vertical;
+  min-height: 150px;
+
+  resize: vertical;
 }
+
+
+/* =====================================================
+   PLACEHOLDER
+===================================================== */
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    color: #94A3B8;
+  color: #94a3b8;
 }
+
+
+/* =====================================================
+   INPUT FOCUS
+===================================================== */
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    background: #FFFFFF;
-    border-color: #10B981;
-    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.08);
+  background: #ffffff;
+
+  border-color: #8b7cf6;
+
+  box-shadow:
+    0 0 0 3px rgba(108, 77, 246, 0.09);
 }
 
-/* =========================
-   BUTTON
-========================= */
+
+/* =====================================================
+   SUBMIT BUTTON
+===================================================== */
 
 .contact-form button {
-    width: 100%;
-    padding: 14px 20px;
-    border: none;
-    border-radius: 11px;
-    background: #10B981;
-    color: #FFFFFF;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  width: 100%;
+
+  padding: 14px 20px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background: linear-gradient(
+    135deg,
+    #6c4df6,
+    #7c5cff
+  );
+
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 9px 22px rgba(108, 77, 246, 0.20);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 }
+
+
+/* =====================================================
+   BUTTON HOVER
+===================================================== */
 
 .contact-form button:hover {
-    background: #059669;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.2);
-}
+  background: linear-gradient(
+    135deg,
+    #5038c6,
+    #6c4df6
+  );
 
-/* =========================
-   TABLET
-========================= */
+  transform: translateY(-2px);
 
-@media (max-width: 992px) {
-
-    .contact {
-        padding: 100px 7%;
-    }
-
-    .contact-container {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-info {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .contact-header h1 {
-        font-size: 40px;
-    }
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 768px) {
-
-    .contact {
-        padding: 90px 6%;
-    }
-
-    .contact-header {
-        margin-bottom: 45px;
-    }
-
-    .contact-header h1 {
-        font-size: 34px;
-    }
-
-    .contact-header p {
-        font-size: 14px;
-    }
-
-    .contact-info {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-form {
-        padding: 28px 22px;
-    }
-}
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media (max-width: 576px) {
-
-    .contact {
-        padding: 70px 5%;
-    }
-
-    .contact-header h1 {
-        font-size: 30px;
-    }
-
-    .contact-header span {
-        font-size: 11px;
-    }
-
-    .info-card {
-        padding: 20px;
-    }
-
-    .contact-form {
-        padding: 24px 18px;
-    }
+  box-shadow:
+    0 12px 28px rgba(108, 77, 246, 0.28);
 }

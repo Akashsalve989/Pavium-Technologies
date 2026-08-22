@@ -9,28 +9,30 @@
 
 
 /* =====================================================
-   WHY CHOOSE US
+   PORTFOLIO SECTION
 ===================================================== */
 
-.why {
+.portfolio {
   position: relative;
 
   width: 100%;
 
-  padding: 115px 8% 120px;
+  min-height: 100vh;
+
+  padding: 120px 8% 110px;
 
   overflow: hidden;
 
   background:
     radial-gradient(
-      circle at 8% 15%,
+      circle at 8% 12%,
       rgba(108, 77, 246, 0.09),
       transparent 25%
     ),
     radial-gradient(
       circle at 92% 85%,
       rgba(20, 184, 166, 0.07),
-      transparent 27%
+      transparent 28%
     ),
     linear-gradient(
       180deg,
@@ -41,10 +43,10 @@
 
 
 /* =====================================================
-   BACKGROUND DECORATION
+   BACKGROUND GLOW
 ===================================================== */
 
-.why::before {
+.portfolio::before {
   content: "";
 
   position: absolute;
@@ -64,7 +66,7 @@
   pointer-events: none;
 }
 
-.why::after {
+.portfolio::after {
   content: "";
 
   position: absolute;
@@ -86,15 +88,15 @@
 
 
 /* =====================================================
-   HEADING
+   PORTFOLIO HEADER
 ===================================================== */
 
-.why-heading {
+.portfolio-title {
   position: relative;
 
   z-index: 2;
 
-  max-width: 780px;
+  max-width: 800px;
 
   margin: 0 auto 65px;
 
@@ -103,22 +105,13 @@
 
 
 /* =====================================================
-   BADGE
+   SMALL LABEL
 ===================================================== */
 
-.why-heading > span {
-  display: inline-flex;
+.portfolio-label {
+  display: inline-block;
 
-  align-items: center;
-  justify-content: center;
-
-  padding: 9px 20px;
-
-  border: 1px solid #ddd6fe;
-
-  border-radius: 50px;
-
-  background: #f5f3ff;
+  margin-bottom: 13px;
 
   color: #6c4df6;
 
@@ -126,12 +119,9 @@
 
   font-weight: 700;
 
-  letter-spacing: 1.8px;
+  letter-spacing: 2px;
 
   text-transform: uppercase;
-
-  box-shadow:
-    0 6px 18px rgba(108, 77, 246, 0.07);
 }
 
 
@@ -139,8 +129,8 @@
    MAIN HEADING
 ===================================================== */
 
-.why-heading h2 {
-  margin: 20px 0 16px;
+.portfolio-title h2 {
+  margin-bottom: 17px;
 
   color: #111827;
 
@@ -150,7 +140,7 @@
 
   font-weight: 800;
 
-  letter-spacing: -1.8px;
+  letter-spacing: -1.7px;
 }
 
 
@@ -158,24 +148,8 @@
    HEADING HIGHLIGHT
 ===================================================== */
 
-.why-heading h2 span {
-  display: inline;
-
-  padding: 0;
-
-  margin: 0;
-
-  border: none;
-
-  background: transparent;
-
+.portfolio-title h2 span {
   color: #6c4df6;
-
-  font-size: inherit;
-
-  font-weight: inherit;
-
-  letter-spacing: inherit;
 }
 
 
@@ -183,7 +157,7 @@
    DESCRIPTION
 ===================================================== */
 
-.why-heading p {
+.portfolio-title p {
   max-width: 700px;
 
   margin: 0 auto;
@@ -197,10 +171,10 @@
 
 
 /* =====================================================
-   WHY GRID
+   PROJECT GRID
 ===================================================== */
 
-.why-grid {
+.portfolio-grid {
   position: relative;
 
   z-index: 2;
@@ -214,37 +188,39 @@
   display: grid;
 
   grid-template-columns:
-    repeat(auto-fit, minmax(300px, 1fr));
+    repeat(3, 1fr);
 
-  gap: 24px;
+  gap: 25px;
 }
 
 
 /* =====================================================
-   WHY CARD
+   PROJECT CARD
 ===================================================== */
 
-.why-card {
+.project-card {
   position: relative;
 
   display: flex;
 
   flex-direction: column;
 
-  min-height: 290px;
+  min-height: 350px;
 
-  padding: 30px;
+  padding: 32px;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.96);
 
   border: 1px solid #e5e7eb;
 
   border-radius: 20px;
 
-  background: rgba(255, 255, 255, 0.94);
+  overflow: hidden;
 
   box-shadow:
-    0 10px 30px rgba(15, 23, 42, 0.055);
-
-  overflow: hidden;
+    0 12px 32px rgba(15, 23, 42, 0.055);
 
   transition:
     transform 0.35s ease,
@@ -255,19 +231,21 @@
 
 
 /* =====================================================
-   CARD TOP ACCENT
+   TOP ACCENT LINE
 ===================================================== */
 
-.why-card::before {
+.project-card::before {
   content: "";
 
   position: absolute;
 
   top: 0;
-  left: 0;
+  left: 50%;
 
   width: 0;
   height: 3px;
+
+  transform: translateX(-50%);
 
   background: linear-gradient(
     90deg,
@@ -283,48 +261,48 @@
    CARD HOVER
 ===================================================== */
 
-.why-card:hover {
-  transform: translateY(-9px);
+.project-card:hover {
+  transform: translateY(-10px);
 
   border-color: #c4b5fd;
 
   background: #ffffff;
 
   box-shadow:
-    0 22px 50px rgba(108, 77, 246, 0.13);
+    0 25px 55px rgba(108, 77, 246, 0.14);
 }
 
-.why-card:hover::before {
-  width: 100%;
+.project-card:hover::before {
+  width: 75%;
 }
 
 
 /* =====================================================
-   ICON
+   PROJECT ICON
 ===================================================== */
 
-.why-icon {
+.project-icon {
   position: relative;
 
   z-index: 1;
 
-  width: 65px;
-  height: 65px;
+  width: 78px;
+  height: 78px;
 
   display: flex;
 
   align-items: center;
   justify-content: center;
 
-  margin-bottom: 22px;
+  margin: 0 auto 22px;
 
-  border-radius: 17px;
+  border-radius: 20px;
 
   background: #f5f3ff;
 
   color: #6c4df6;
 
-  font-size: 27px;
+  font-size: 35px;
 
   box-shadow:
     inset 0 0 0 1px rgba(108, 77, 246, 0.08);
@@ -341,7 +319,7 @@
    ICON HOVER
 ===================================================== */
 
-.why-card:hover .why-icon {
+.project-card:hover .project-icon {
   background: linear-gradient(
     135deg,
     #6c4df6,
@@ -351,24 +329,24 @@
   color: #ffffff;
 
   transform:
-    translateY(-3px)
-    scale(1.07);
+    translateY(-4px)
+    scale(1.08);
 
   box-shadow:
-    0 11px 25px rgba(108, 77, 246, 0.23);
+    0 12px 28px rgba(108, 77, 246, 0.25);
 }
 
 
 /* =====================================================
-   CARD TITLE
+   PROJECT TITLE
 ===================================================== */
 
-.why-card h3 {
+.project-card h3 {
   position: relative;
 
   z-index: 1;
 
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 
   color: #111827;
 
@@ -386,16 +364,16 @@
    TITLE HOVER
 ===================================================== */
 
-.why-card:hover h3 {
+.project-card:hover h3 {
   color: #6c4df6;
 }
 
 
 /* =====================================================
-   CARD DESCRIPTION
+   PROJECT DESCRIPTION
 ===================================================== */
 
-.why-card p {
+.project-card p {
   position: relative;
 
   z-index: 1;
@@ -406,36 +384,36 @@
 
   line-height: 1.75;
 
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 
 /* =====================================================
-   CARD BUTTON
+   PROJECT BUTTON
 ===================================================== */
 
-.why-card button {
+.project-card button {
   position: relative;
 
   z-index: 1;
 
-  display: inline-flex;
-
-  align-items: center;
-
-  gap: 9px;
-
-  width: fit-content;
+  width: 100%;
 
   margin-top: auto;
 
-  padding: 0;
+  padding: 13px 25px;
 
   border: none;
 
-  background: transparent;
+  border-radius: 10px;
 
-  color: #6c4df6;
+  background: linear-gradient(
+    135deg,
+    #6c4df6,
+    #7c5cff
+  );
+
+  color: #ffffff;
 
   font-family: "Poppins", sans-serif;
 
@@ -445,9 +423,13 @@
 
   cursor: pointer;
 
+  box-shadow:
+    0 8px 20px rgba(108, 77, 246, 0.18);
+
   transition:
-    color 0.3s ease,
-    transform 0.3s ease;
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 
@@ -455,25 +437,42 @@
    BUTTON HOVER
 ===================================================== */
 
-.why-card button:hover {
-  color: #14a895;
+.project-card button:hover {
+  background: linear-gradient(
+    135deg,
+    #5038c6,
+    #6c4df6
+  );
 
-  transform: translateX(5px);
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 28px rgba(108, 77, 246, 0.28);
 }
 
 
 /* =====================================================
-   BUTTON ICON
+   CARD GLOW
 ===================================================== */
 
-.why-card button svg {
-  font-size: 12px;
+.project-card:hover::after {
+  content: "";
 
-  transition: transform 0.3s ease;
-}
+  position: absolute;
 
-.why-card button:hover svg {
-  transform: translateX(4px);
+  width: 180px;
+  height: 180px;
+
+  right: -90px;
+  bottom: -90px;
+
+  border-radius: 50%;
+
+  background: rgba(20, 184, 166, 0.12);
+
+  filter: blur(45px);
+
+  pointer-events: none;
 }
 
 
@@ -481,36 +480,26 @@
    LARGE TABLET
 ===================================================== */
 
-@media (max-width: 992px) {
+@media (max-width: 1000px) {
 
-  .why {
-    padding: 95px 7% 100px;
+  .portfolio {
+    padding: 100px 7%;
   }
 
-  .why-heading {
-    margin-bottom: 52px;
-  }
-
-  .why-heading h2 {
-    font-size: 42px;
-
-    letter-spacing: -1.2px;
-  }
-
-  .why-heading p {
-    font-size: 15px;
-  }
-
-  .why-grid {
+  .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
 
-    gap: 20px;
+    gap: 22px;
   }
 
-  .why-card {
-    min-height: 275px;
+  .portfolio-title h2 {
+    font-size: 42px;
+  }
 
-    padding: 27px;
+  .project-card {
+    min-height: 330px;
+
+    padding: 30px;
   }
 }
 
@@ -521,74 +510,72 @@
 
 @media (max-width: 768px) {
 
-  .why {
-    padding: 80px 5% 90px;
+  .portfolio {
+    padding: 85px 6% 90px;
   }
 
-  .why-heading {
+  .portfolio-title {
     margin-bottom: 42px;
   }
 
-  .why-heading > span {
-    padding: 8px 16px;
-
+  .portfolio-label {
     font-size: 10.5px;
 
-    letter-spacing: 1.5px;
+    letter-spacing: 1.7px;
   }
 
-  .why-heading h2 {
+  .portfolio-title h2 {
     font-size: 34px;
 
     line-height: 1.2;
 
     letter-spacing: -0.8px;
-
-    margin: 16px 0 13px;
   }
 
-  .why-heading p {
+  .portfolio-title p {
     font-size: 14px;
 
     line-height: 1.7;
   }
 
-  .why-grid {
+  .portfolio-grid {
     grid-template-columns: 1fr;
 
     max-width: 540px;
 
-    gap: 17px;
+    margin: 0 auto;
+
+    gap: 18px;
   }
 
-  .why-card {
+  .project-card {
     min-height: auto;
 
-    padding: 26px;
+    padding: 28px;
 
     border-radius: 18px;
   }
 
-  .why-card:hover {
-    transform: translateY(-6px);
+  .project-card:hover {
+    transform: translateY(-7px);
   }
 
-  .why-icon {
-    width: 60px;
-    height: 60px;
+  .project-icon {
+    width: 68px;
+    height: 68px;
 
-    margin-bottom: 18px;
+    margin-bottom: 19px;
 
-    border-radius: 15px;
+    border-radius: 17px;
 
-    font-size: 25px;
+    font-size: 31px;
   }
 
-  .why-card h3 {
-    font-size: 20px;
+  .project-card h3 {
+    font-size: 19px;
   }
 
-  .why-card p {
+  .project-card p {
     font-size: 13px;
 
     line-height: 1.7;
@@ -602,79 +589,73 @@
 
 @media (max-width: 576px) {
 
-  .why {
-    padding: 68px 5% 75px;
+  .portfolio {
+    padding: 70px 5% 75px;
   }
 
-  .why-heading {
+  .portfolio-title {
     margin-bottom: 32px;
   }
 
-  .why-heading > span {
-    padding: 7px 14px;
+  .portfolio-label {
+    font-size: 10px;
 
-    font-size: 9.5px;
-
-    letter-spacing: 1.3px;
+    letter-spacing: 1.5px;
   }
 
-  .why-heading h2 {
+  .portfolio-title h2 {
     font-size: 28px;
 
-    line-height: 1.2;
-
-    letter-spacing: -0.5px;
-
-    margin: 14px 0 12px;
+    margin-bottom: 12px;
   }
 
-  .why-heading p {
+  .portfolio-title p {
     font-size: 12.5px;
 
     line-height: 1.7;
   }
 
-  .why-grid {
-    gap: 14px;
+  .portfolio-grid {
+    gap: 15px;
   }
 
-  .why-card {
-    padding: 22px;
+  .project-card {
+    padding: 23px;
 
-    border-radius: 16px;
+    border-radius: 17px;
   }
 
-  .why-card:hover {
-    transform: translateY(-4px);
-  }
-
-  .why-icon {
-    width: 53px;
-    height: 53px;
+  .project-icon {
+    width: 57px;
+    height: 57px;
 
     margin-bottom: 16px;
 
-    border-radius: 13px;
+    border-radius: 14px;
 
-    font-size: 22px;
+    font-size: 27px;
   }
 
-  .why-card h3 {
+  .project-card h3 {
     font-size: 17px;
 
-    margin-bottom: 7px;
+    margin-bottom: 8px;
   }
 
-  .why-card p {
+  .project-card p {
     font-size: 12px;
 
     line-height: 1.65;
 
-    margin-bottom: 16px;
+    margin-bottom: 19px;
   }
 
-  .why-card button {
-    font-size: 11.5px;
+  .project-card button {
+    padding: 11px 20px;
+
+    font-size: 12px;
+
+    border-radius: 8px;
   }
 }
 
@@ -685,42 +666,43 @@
 
 @media (max-width: 360px) {
 
-  .why {
+  .portfolio {
     padding-left: 4%;
-
     padding-right: 4%;
   }
 
-  .why-heading h2 {
+  .portfolio-title h2 {
     font-size: 25px;
   }
 
-  .why-heading p {
+  .portfolio-title p {
     font-size: 11.5px;
   }
 
-  .why-card {
-    padding: 19px;
+  .project-card {
+    padding: 20px;
   }
 
-  .why-icon {
-    width: 49px;
-    height: 49px;
+  .project-icon {
+    width: 52px;
+    height: 52px;
 
-    font-size: 20px;
+    font-size: 24px;
 
-    border-radius: 12px;
+    border-radius: 13px;
   }
 
-  .why-card h3 {
+  .project-card h3 {
     font-size: 16px;
   }
 
-  .why-card p {
-    font-size: 11px;
+  .project-card p {
+    font-size: 11.5px;
   }
 
-  .why-card button {
-    font-size: 11px;
+  .project-card button {
+    padding: 10px 18px;
+
+    font-size: 11.5px;
   }
 }
