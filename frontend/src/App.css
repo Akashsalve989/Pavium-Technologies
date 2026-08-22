@@ -1,41 +1,65 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+/* =====================================================
+   GLOBAL RESET
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html,
-body,
-#root{
-  width:100%;
-  margin:0;
-  padding:0;
-  overflow-x:hidden;
+html {
+  width: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-body{
-  font-family:"Poppins",sans-serif;
-  background:#f8fafc;
-  color:#0f172a;
+body {
+  width: 100%;
+  min-width: 0;
+
+  font-family: "Poppins", sans-serif;
+
+  background: #f8fafc;
+
+  color: #0f172a;
+
+  overflow-x: hidden;
 }
 
-a{
-  text-decoration:none;
+#root {
+  width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
 }
 
-img{
-  max-width:100%;
-  display:block;
+a {
+  text-decoration: none;
 }
 
-button{
-  cursor:pointer;
-  font-family:inherit;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-section{
-  width:100%;
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
 }
+
+button {
+  cursor: pointer;
+}
+
+section {
+  width: 100%;
+  max-width: 100%;
+}
+
+
 /* =====================================================
    GLOBAL MOBILE FIX
 ===================================================== */
@@ -43,24 +67,32 @@ section{
 @media (max-width: 768px) {
 
   html,
-  body {
+  body,
+  #root {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
   }
 
-  #root {
-    width: 100%;
-    overflow-x: hidden;
-  }
-
   section {
+    width: 100%;
     max-width: 100%;
   }
 
   img {
     max-width: 100%;
     height: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    max-width: 100%;
+    overflow-wrap: anywhere;
   }
 
   button,
@@ -71,7 +103,7 @@ section{
 
 
 /* =====================================================
-   MOBILE CONTAINER FIX
+   MOBILE SECTION FIX
 ===================================================== */
 
 @media (max-width: 576px) {
@@ -84,14 +116,17 @@ section{
   .contact,
   .careers,
   .industries,
-  .testimonials {
+  .testimonials,
+  .services-page {
     width: 100%;
     max-width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
   }
 
 
-  /* Headings */
+  /* =========================
+     HEADINGS
+  ========================= */
 
   .services-heading,
   .tech-heading,
@@ -101,13 +136,16 @@ section{
   .contact-header,
   .careers-heading,
   .industries-title,
-  .testimonial-title {
+  .testimonial-title,
+  .services-header {
     width: 100%;
     max-width: 100%;
   }
 
 
-  /* Grids */
+  /* =========================
+     GRIDS
+  ========================= */
 
   .services-grid,
   .tech-grid,
@@ -115,20 +153,40 @@ section{
   .portfolio-grid,
   .career-grid,
   .industry-grid,
-  .testimonial-grid {
+  .testimonial-grid,
+  .medical-grid {
     width: 100%;
     max-width: 100%;
   }
 
 
-  /* Long text */
+  /* =========================
+     CARDS
+  ========================= */
+
+  .service-card,
+  .tech-card,
+  .why-card,
+  .project-card,
+  .career-card,
+  .industry-card,
+  .testimonial-card,
+  .info-card {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+
+  /* =========================
+     TEXT
+  ========================= */
 
   h1,
   h2,
   h3,
   p {
-    overflow-wrap: break-word;
-    word-wrap: break-word;
+    overflow-wrap: anywhere;
+    word-break: normal;
   }
 }
 
@@ -147,7 +205,8 @@ section{
   .contact,
   .careers,
   .industries,
-  .testimonials {
+  .testimonials,
+  .services-page {
     padding-left: 5%;
     padding-right: 5%;
   }
